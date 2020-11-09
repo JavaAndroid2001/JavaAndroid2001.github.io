@@ -15,9 +15,9 @@
   
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="ProgWeb">
   <meta name="keywords" content="">
-  <title>第一次文章测试 - ProgWeb</title>
+  <title>Java命名规范 - ProgWeb</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
 
@@ -162,7 +162,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="第一次文章测试">
+            <span class="h2" id="subtitle" title="Java命名规范">
               
             </span>
 
@@ -172,8 +172,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-11-08 20:39" pubdate>
-        2020年11月8日 晚上
+      <time datetime="2020-11-09 16:36" pubdate>
+        2020年11月9日 下午
       </time>
     </span>
   
@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      15 字
+      533 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      6
        分钟
     </span>
   
@@ -224,18 +224,110 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">第一次文章测试</h1>
+            <h1 style="display: none">Java命名规范</h1>
             
             <div class="markdown-body">
-              <p>这第一次文章测试</p>
-<p>第一次图片测试</p>
-<p><img src="%5Cimages%5Cpasted-2.png%5C" srcset="/img/loading.gif" alt="upload successful"></p>
+              <p>一、命名规范</p>
+<p>1、 项目名全部小写</p>
+<p>2、 包名全部小写</p>
+<p>3、 类名首字母大写，如果类名由多个单词组成，每个单词的首字母都要大写。</p>
+<p>如：public class MyFirstClass{}</p>
+<p>4、 变量名、方法名首字母小写，如果名称由多个单词组成，每个单词的首字母都要大写。</p>
+<p>如：int index=0;</p>
+<pre><code>   public void toString()&#123;&#125;</code></pre>
+<p>5、 常量名全部大写</p>
+<p>如：public static final String GAME_COLOR=”RED”;</p>
+<p>6、所有命名规则必须遵循以下规则：</p>
+<p>1)、名称只能由字母、数字、下划线、$符号组成</p>
+<p>2)、不能以数字开头</p>
+<p>3)、名称不能使用JAVA中的关键字。</p>
+<p>4)、坚决不允许出现中文及拼音命名。</p>
+<hr>
+<p>二、注释规范</p>
+<p>1、   类注释</p>
+<p>在每个类前面必须加上类注释，注释模板如下：</p>
+<p>/**</p>
+<ul>
+<li><p>Copyright (C), 2006-2010, ChengDu Lovo info. Co., Ltd.</p>
+</li>
+<li><p>FileName: Test.java</p>
+</li>
+<li><p>类的详细说明</p>
+</li>
+</ul>
+<p>*</p>
+<ul>
+<li><p>@author 类创建者姓名</p>
+<ul>
+<li>@Date    创建日期</li>
+</ul>
+</li>
+<li><p>@version 1.00</p>
+</li>
+</ul>
+<p>*/</p>
+<p>2、   属性注释</p>
+<p>在每个属性前面必须加上属性注释，注释模板如下：</p>
+<p>/** 提示信息 */</p>
+<p>private String strMsg = null;</p>
+<p>3、   方法注释</p>
+<p>在每个方法前面必须加上方法注释，注释模板如下：</p>
+<p>/**</p>
+<ul>
+<li>类方法的详细使用说明</li>
+</ul>
+<p>*</p>
+<ul>
+<li><p>@param 参数1 参数1的使用说明</p>
+</li>
+<li><p>@return 返回结果的说明</p>
+</li>
+<li><p>@throws 异常类型.错误代码 注明从此类方法中抛出异常的说明</p>
+</li>
+</ul>
+<p>*/</p>
+<p>4、   构造方法注释</p>
+<p>在每个构造方法前面必须加上注释，注释模板如下：</p>
+<p>/**</p>
+<ul>
+<li>构造方法的详细使用说明</li>
+</ul>
+<p>*</p>
+<ul>
+<li><p>@param 参数1 参数1的使用说明</p>
+</li>
+<li><p>@throws 异常类型.错误代码 注明从此类方法中抛出异常的说明</p>
+</li>
+</ul>
+<p>*/</p>
+<p>5、   方法内部注释</p>
+<p>在方法内部使用单行或者多行注释，该注释根据实际情况添加。</p>
+<p>如：//背景颜色</p>
+<pre><code>   Color bgColor = Color.RED</code></pre>
+<hr>
+<p> 文章引用：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/maowang1991/archive/2013/06/29/3162366.html">https://www.cnblogs.com/maowang1991/archive/2013/06/29/3162366.html</a></p>
+<hr>
+<p><del>我正在黑暗中摸索前行，每一盏我点亮的路灯下都有我沾满泥垢的掌印，但光亮终会散满我所幻想的世界。</del></p>
 
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Java/">Java</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Java%E8%AE%B0%E5%BD%95/">Java记录</a>
+                    
+                  </div>
                 
               </div>
               
@@ -246,15 +338,15 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2020/11/09/%E5%86%99%E5%9C%A82020-11-9/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Markdown语法之 Text</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2020/11/07/hello-world/">
-                        <span class="hidden-mobile">Hello World</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
