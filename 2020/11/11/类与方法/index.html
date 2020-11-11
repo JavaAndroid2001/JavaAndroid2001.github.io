@@ -15,11 +15,27 @@
   
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="ProgWeb">
   <meta name="keywords" content="">
-  <title>标签 - ProgWeb</title>
+  <title>类与方法 - ProgWeb</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.1.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+  
 
 
 
@@ -47,7 +63,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -146,9 +162,46 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="标签">
+            <span class="h2" id="subtitle" title="类与方法">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-11-11 22:45" pubdate>
+        2020年11月11日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      412 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      4
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -161,24 +214,101 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-<div class="text-center tagcloud">
-  <a href="/tags/Java/" style="font-size: 15px; color: #bbe">Java</a> <a href="/tags/Java%E8%AE%B0%E5%BD%95/" style="font-size: 15px; color: #bbe">Java记录</a> <a href="/tags/Markdown%E8%AF%AD%E6%B3%95/" style="font-size: 15px; color: #bbe">Markdown语法</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 15px; color: #bbe">日志</a>
-</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">类与方法</h1>
+            
+            <div class="markdown-body">
+              <h2 id="类与方法"><a href="#类与方法" class="headerlink" title="类与方法"></a>类与方法</h2><hr>
+<p>脑子不太好的我容易被混淆了呀<br></br>&emsp;&emsp;我们先来看看类的定义格式：</p>
+<pre><code>public class ClassName&#123;
+    //成员变量
+    //成员方法
+    &#125;</code></pre>
+<p></br>&emsp;&emsp;再来看看方法的定义格式：</p>
+<pre><code>    public static void 方法名称 ( )&#123;
+    方法体
+    &#125;</code></pre>
+<p>难道就没有感觉有那么一丢丢像嘛<br></br>不过把代码摆出来就清晰了许多<br></br>以上是我初学的问题所述<br></br>这时候我们来理解一下类和方法<br></br>&emsp;&emsp;</p>
+<hr>
+<h3 id="运用类比来解释类和方法"><a href="#运用类比来解释类和方法" class="headerlink" title="运用类比来解释类和方法"></a>运用类比来解释类和方法</h3><p>事物与类的对比<br></br>现实世界的一类事物：<br>    </br>&emsp;&emsp;属性：事物的状态信息。<br>    </br>&emsp;&emsp;行为：事物能够做什么。<br></br>Java中class描述事物也是如此：<br>    </br>&emsp;&emsp;成员变量：对应事物的属性<br>    </br>&emsp;&emsp;成员方法：对应事物的行为</p>
+<p></br>&emsp;&emsp;运用类比（类比不管在生活，写代码，还是学习上，都是一个很重要的概念）的方法我们可以把类看作是“一个人类”<br></br>&emsp;&emsp;人类有属性（变量）（我的血量，我的蓝量，我的名字，我的身高，我的体重，这些都可以看作是我的属性）<br></br>&emsp;&emsp;人类的行为（方法）（我吃饭，我睡觉，我敲代码，我打游戏这些都是我的行为）</p>
+<p></br></br></br></br>今天就先到这吧，破电脑没电了，学校的屁事还有点多<br></br>最后一定是自律自律自律！！！！加油你能行</p>
+<hr>
+<p><del>我正在黑暗中摸索前行，每一盏我点亮的路灯下都有我沾满泥垢的掌印，但光亮终会散满我所幻想的世界。</del></p>
 
-              </div>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">学习记录</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Java/">Java</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/11/10/%E4%BB%A5%E7%BB%86%E8%A1%8C%E5%BE%8B%E8%BA%AB%EF%BC%8C%E4%B8%8D%E5%8F%AF%E4%BB%A5%E7%BB%86%E8%A1%8C%E5%8F%96%E4%BA%BA%E3%80%82/">
+                        <span class="hidden-mobile">以细行律身，不可以细行取人。</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -261,9 +391,15 @@
 
 
 
+  <script  src="https://cdn.staticfile.org/tocbot/4.12.0/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.3.0/anchor.min.js" ></script>
 
 
 
