@@ -15,9 +15,9 @@
   
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="">
-  <meta name="author" content="ProgWeb">
+  <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>类与方法 - ProgWeb</title>
+  <title>面向对象的三大特征——封装 - ProgWeb</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
 
@@ -162,7 +162,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="类与方法">
+            <span class="h2" id="subtitle" title="面向对象的三大特征——封装">
               
             </span>
 
@@ -172,8 +172,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-11-11 22:45" pubdate>
-        2020年11月11日 晚上
+      <time datetime="2020-11-12 22:25" pubdate>
+        2020年11月12日 晚上
       </time>
     </span>
   
@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      412 字
+      742 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4
+      9
        分钟
     </span>
   
@@ -224,24 +224,105 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">类与方法</h1>
+            <h1 style="display: none">面向对象的三大特征——封装</h1>
             
             <div class="markdown-body">
-              <h2 id="类与方法"><a href="#类与方法" class="headerlink" title="类与方法"></a>类与方法</h2><hr>
-<p>脑子不太好的我容易被混淆了呀<br></br>&emsp;&emsp;我们先来看看类的定义格式：</p>
-<pre><code>public class ClassName&#123;
-    //成员变量
-    //成员方法
-    &#125;</code></pre>
-<p></br>&emsp;&emsp;再来看看方法的定义格式：</p>
-<pre><code>    public static void 方法名称 ( )&#123;
-    方法体
-    &#125;</code></pre>
-<p>难道就没有感觉有那么一丢丢像嘛<br></br>不过把代码摆出来就清晰了许多<br></br>以上是我初学的问题所述<br></br>这时候我们来理解一下类和方法<br></br>&emsp;&emsp;</p>
+              <h2 id="面向对象的三大特征：封装，继承，多态。"><a href="#面向对象的三大特征：封装，继承，多态。" class="headerlink" title="面向对象的三大特征：封装，继承，多态。"></a>面向对象的三大特征：封装，继承，多态。</h2><hr>
+<h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><pre><code>封装性：
+    1.方法就是一种封装性
+    2.关键字pribate也是一种封装性
+pribate：
+    对对象进行封装，
+        pribate
+                    适用于解决一些问题
+    问题描述：定义类的年龄时，无法阻止不合理的数值被设置进来。
+    解决方案：用prvate进行修饰，那么本类当中仍然可以随意访问了。
+
+一旦使用了provate进行修饰，那么本类当中仍然可以随意访问。
+但是！超出本类范围之外就不能直接访问了。</code></pre>
+<p>封装就是将一些细节信息隐藏起来，对外界不可见。</p>
+<p>我们来看具体项目限制</p>
+<pre><code>        /*
+项目功能：1.要求使用private来定义成员变量
+        2.要求变量下定义时能够对变量进行可执行的判断方法操作和循环
+        3.使用另一个类来调用Demo01的成员变量以及成员方法
+
+解决方法：1.先用类比来对此问题进行简单的思路构图建设
+            （1）学生的name，age，male,height,weight
+            （2）用两个类来完成程序
+         */</code></pre>
+<p>Demo01代码</p>
+<pre><code class="hljs javascript">package com.lei;
+<span class="hljs-comment">/*</span>
+<span class="hljs-comment">    项目功能：1.要求使用private来定义成员变量</span>
+<span class="hljs-comment">            2.要求变量下定义时能够对变量进行可执行的判断方法操作和循环</span>
+<span class="hljs-comment">            3.使用另一个类来调用Demo01的成员变量以及成员方法</span>
+<span class="hljs-comment"></span>
+<span class="hljs-comment">    解决方法：1.先用类比来对此问题进行简单的思路构图建设</span>
+<span class="hljs-comment">                （1）学生的name，age，male,height,weight</span>
+<span class="hljs-comment">                （2）用两个类来完成程序</span>
+<span class="hljs-comment"> */</span>
+public <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo01</span> </span>&#123;
+    <span class="hljs-comment">//成员变量</span>
+    private <span class="hljs-built_in">String</span> name;
+    private int age;
+    private boolean male;
+    private double height;
+    private double weight;
+    <span class="hljs-comment">//成员方法</span>
+    <span class="hljs-comment">//这时候需要 方法：set***   get***</span>
+    <span class="hljs-comment">//布尔型比较特殊：在获取返回值的时候只能用is***</span>
+    public <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-title">show</span>(<span class="hljs-params"></span>)</span>&#123;
+        System.out.println(<span class="hljs-string">&quot;姓名：&quot;</span>+name+<span class="hljs-string">&quot;   &quot;</span>+<span class="hljs-string">&quot;年龄：&quot;</span>+age+<span class="hljs-string">&quot;   &quot;</span>+<span class="hljs-string">&quot;是否为男性：&quot;</span>+male+<span class="hljs-string">&quot;身高：&quot;</span>+height+<span class="hljs-string">&quot;   &quot;</span>+<span class="hljs-string">&quot;体重：&quot;</span>+weight);
+    &#125;
+    public <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-title">setName</span>(<span class="hljs-params"><span class="hljs-built_in">String</span> nu1</span>)</span>&#123;
+        name = nu1;
+    &#125;
+    public <span class="hljs-built_in">String</span> <span class="hljs-function"><span class="hljs-title">getName</span>(<span class="hljs-params"></span>)</span>&#123;
+        <span class="hljs-keyword">return</span> name;
+    &#125;
+    public <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-title">setAge</span>(<span class="hljs-params">int nu2</span>)</span>&#123;
+        age = nu2;
+    &#125;
+    public int <span class="hljs-function"><span class="hljs-title">getAge</span>(<span class="hljs-params"></span>)</span>&#123;
+        <span class="hljs-keyword">return</span> age;
+    &#125;
+    public <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-title">setMale</span>(<span class="hljs-params">boolean nu3</span>)</span>&#123;
+        male = nu3;
+    &#125;
+    public boolean <span class="hljs-function"><span class="hljs-title">isMale</span>(<span class="hljs-params"></span>)</span>&#123;
+        <span class="hljs-keyword">return</span> male;
+    &#125;
+    public <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-title">setHeight</span>(<span class="hljs-params">double nu4</span>)</span>&#123;
+        height = nu4;
+    &#125;
+    public double <span class="hljs-function"><span class="hljs-title">getHeight</span>(<span class="hljs-params"></span>)</span>&#123;
+        <span class="hljs-keyword">return</span> height;
+    &#125;
+    public <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-title">setWeight</span>(<span class="hljs-params">double nu5</span>)</span>&#123;
+        weight = nu5;
+    &#125;
+    public double <span class="hljs-function"><span class="hljs-title">getWeight</span>(<span class="hljs-params"></span>)</span>&#123;
+        <span class="hljs-keyword">return</span> weight;
+    &#125;
+
+&#125;
+</code></pre>
+
+
 <hr>
-<h3 id="运用类比来解释类和方法"><a href="#运用类比来解释类和方法" class="headerlink" title="运用类比来解释类和方法"></a>运用类比来解释类和方法</h3><p>事物与类的对比<br></br>现实世界的一类事物：<br>    </br>&emsp;&emsp;属性：事物的状态信息。<br>    </br>&emsp;&emsp;行为：事物能够做什么。<br></br>Java中class描述事物也是如此：<br>    </br>&emsp;&emsp;成员变量：对应事物的属性<br>    </br>&emsp;&emsp;成员方法：对应事物的行为</p>
-<p></br>&emsp;&emsp;运用类比（类比不管在生活，写代码，还是学习上，都是一个很重要的概念）的方法我们可以把类看作是“一个人类”<br></br>&emsp;&emsp;人类有属性（变量）（我的血量，我的蓝量，我的名字，我的身高，我的体重，这些都可以看作是我的属性）<br></br>&emsp;&emsp;人类的行为（方法）（我吃饭，我睡觉，我敲代码，我打游戏这些都是我的行为）</p>
-<p></br></br></br></br>今天就先到这吧，破电脑没电了，学校的屁事还有点多<br></br>最后一定是自律自律自律！！！！加油你能行</p>
+<p>Student代码：</p>
+<pre><code class="hljs javascript">
+public <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> </span>&#123;
+    public <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-title">main</span>(<span class="hljs-params"><span class="hljs-built_in">String</span>[] args</span>)</span> &#123;
+        Demo01 student = <span class="hljs-keyword">new</span> Demo01();
+        student.show();
+    &#125;
+
+</code></pre>
+
+<hr>
+<p>今天的时间不是很多，没来得及写，代码不是很全，现在22.39，宿舍已经熄灯，我还希望有更多的时间能够学习但是时间不允许了哈哈，因为电脑撑不住电，明天还有课，但是但是，明天一定一定完善这几段代码！！！<br></br></p>
 <hr>
 <p><del>我正在黑暗中摸索前行，每一盏我点亮的路灯下都有我沾满泥垢的掌印，但光亮终会散满我所幻想的世界。</del></p>
 
@@ -250,20 +331,6 @@
             <div>
               <div class="post-metas mb-3">
                 
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">学习记录</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/Java/">Java</a>
-                    
-                  </div>
                 
               </div>
               
@@ -274,18 +341,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/11/12/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81%E2%80%94%E2%80%94%E5%B0%81%E8%A3%85/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">面向对象的三大特征——封装</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/11/10/%E4%BB%A5%E7%BB%86%E8%A1%8C%E5%BE%8B%E8%BA%AB%EF%BC%8C%E4%B8%8D%E5%8F%AF%E4%BB%A5%E7%BB%86%E8%A1%8C%E5%8F%96%E4%BA%BA%E3%80%82/">
-                        <span class="hidden-mobile">以细行律身，不可以细行取人。</span>
+                      <a href="/2020/11/11/%E7%B1%BB%E4%B8%8E%E6%96%B9%E6%B3%95/">
+                        <span class="hidden-mobile">类与方法</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
