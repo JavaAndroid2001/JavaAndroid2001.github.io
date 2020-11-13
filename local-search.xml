@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>this的使用</title>
+    <link href="/2020/11/13/this%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <url>/2020/11/13/this%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Java之this的使用"><a href="#Java之this的使用" class="headerlink" title="Java之this的使用"></a>Java之this的使用</h2><hr><p>当方法的局部变量和类的成员变量重名的时候，根据“就近原则”，优先使用局部变量。<br></br><br>如果需要访问本类当中的成员变量，需要使用格式：        &emsp;&emsp;类似两个name不知道用谁的，但是加了this程序就知道了<br></br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    this.成员变量名<br></br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;说白了就是指向性的对应内存区的使用。<br></br>&emsp;&emsp;<br></br>&emsp;&emsp;“通过谁调用的方法，谁就是this”</p><hr><p>例：</p><pre><code class="hljs javascript">D1：<span class="hljs-built_in">String</span> name;<span class="hljs-comment">//参数name是对方的名字</span><span class="hljs-comment">//成员变量name是自己的名字</span>public <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-title">sayHello</span>(<span class="hljs-params"><span class="hljs-built_in">String</span> name</span>)</span>&#123;Systeml.out.println(name+<span class="hljs-string">&quot;,你好，我是&quot;</span>+<span class="hljs-built_in">this</span>.name);&#125;D2：Person person = <span class="hljs-keyword">new</span> Person();person.name = <span class="hljs-string">&quot;王健林&quot;</span>;person.sayHello(name:<span class="hljs-string">&quot;王思聪&quot;</span>);</code></pre><hr><p>写在后面：<br></br>&emsp;&emsp;<br>    由于最近事情比较多，要跑步，要洗衣服，要洗鞋子，要吃饭，要上课，要预习，我这并不是为自己找借口，我没找到一个时间都会不停的学习，不停的敲代码，虽然很累但是生活很充实，这破电脑又要没电了，真是醉了，但生活还得继续呀！！！！！！！！！！！！！！！！！！！！！！！！加油！！！！！！<br>    </br>&emsp;&emsp;<br>    还有就是Github的服务器是真的慢，如果有时间一定要找个树莓派来做服务器，但是网线怎么办，还得思考思考。<br>     </br>&emsp;&emsp;<br>     其实我写了很多笔记，但是更新为什么这么慢，因为我在挤牙膏呀！！！！<br>      </br>&emsp;&emsp;<br>      又到了11点，告辞！最后再弱弱说一句，我的博客好垃圾呀，没有别人的炫酷，如果有时间我一定会帮你加上几个功能！！！！！！</p><hr><p><del>我正在黑暗中摸索前行，每一盏我点亮的路灯下都有我沾满泥垢的掌印，但光亮终会散满我所幻想的世界。</del></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>面向对象的三大特征——封装</title>
     <link href="/2020/11/12/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81%E2%80%94%E2%80%94%E5%B0%81%E8%A3%85/"/>
     <url>/2020/11/12/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81%E2%80%94%E2%80%94%E5%B0%81%E8%A3%85/</url>

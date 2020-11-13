@@ -17,9 +17,25 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>分类 - ProgWeb</title>
+  <title>this的使用 - ProgWeb</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.1.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+  
 
 
 
@@ -47,7 +63,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -146,9 +162,46 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="分类">
+            <span class="h2" id="subtitle" title="this的使用">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-11-13 22:55" pubdate>
+        2020年11月13日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      480 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      5
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -161,141 +214,96 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-
-
-
-
-
-
-<div class="category-list">
-  
-  
-  
-  
-    
-    
-    <div class="category row">
-      <a
-        class="category-item collapsed list-group-item category-item-action col-10 col-md-11"
-        id="heading-ckhge96rs0002jwumambkeb2t" role="tab" data-toggle="collapse" href="#collapse-ckhge96rs0002jwumambkeb2t"
-        aria-expanded="false"
-      >
-        Java
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      <a href="/categories/Java/" class="category-count col-2 col-md-1">
-        <i class="iconfont icon-articles"></i>
-        <span>1</span>
-      </a>
-      <div class="category-collapse">
-        
-          
-  <div id="collapse-ckhge96rs0002jwumambkeb2t" class="collapse in" role="tabpanel"
-       aria-labelledby="heading-ckhge96rs0002jwumambkeb2t">
-    
-    
-    
       
-      
-        <a href="/2020/11/09/Java%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/" class="list-group-item list-group-item-action">
-          <span class="category-post">Java命名规范</span>
-        </a>
-      
-    
-  </div>
 
-        
-      </div>
-    </div>
-  
-    
-    
-    <div class="category row">
-      <a
-        class="category-item collapsed list-group-item category-item-action col-10 col-md-11"
-        id="heading-ckhge96rw0007jwumhy4j0ih1" role="tab" data-toggle="collapse" href="#collapse-ckhge96rw0007jwumhy4j0ih1"
-        aria-expanded="false"
-      >
-        语法
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      <a href="/categories/%E8%AF%AD%E6%B3%95/" class="category-count col-2 col-md-1">
-        <i class="iconfont icon-articles"></i>
-        <span>1</span>
-      </a>
-      <div class="category-collapse">
-        
-          
-  <div id="collapse-ckhge96rw0007jwumhy4j0ih1" class="collapse in" role="tabpanel"
-       aria-labelledby="heading-ckhge96rw0007jwumhy4j0ih1">
-    
-    
-    
-      
-      
-        <a href="/2020/11/09/%E5%86%99%E5%9C%A82020-11-9/" class="list-group-item list-group-item-action">
-          <span class="category-post">Markdown语法之 Text</span>
-        </a>
-      
-    
-  </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">this的使用</h1>
+            
+            <div class="markdown-body">
+              <h2 id="Java之this的使用"><a href="#Java之this的使用" class="headerlink" title="Java之this的使用"></a>Java之this的使用</h2><hr>
+<p>当方法的局部变量和类的成员变量重名的时候，根据“就近原则”，优先使用局部变量。<br></br><br>如果需要访问本类当中的成员变量，需要使用格式：        &emsp;&emsp;类似两个name不知道用谁的，但是加了this程序就知道了<br></br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    this.成员变量名<br></br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;说白了就是指向性的对应内存区的使用。<br></br>&emsp;&emsp;<br></br>&emsp;&emsp;“通过谁调用的方法，谁就是this”</p>
+<hr>
+<p>例：</p>
+<pre><code class="hljs javascript">
+D1：
+			<span class="hljs-built_in">String</span> name;
+			
+			<span class="hljs-comment">//参数name是对方的名字</span>
+			<span class="hljs-comment">//成员变量name是自己的名字</span>
+		public <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-title">sayHello</span>(<span class="hljs-params"><span class="hljs-built_in">String</span> name</span>)</span>&#123;
+				Systeml.out.println(name+<span class="hljs-string">&quot;,你好，我是&quot;</span>+<span class="hljs-built_in">this</span>.name);
+		&#125;
 
-        
-      </div>
-    </div>
-  
-    
-    
-    <div class="category row">
-      <a
-        class="category-item collapsed list-group-item category-item-action col-10 col-md-11"
-        id="heading-ckhge96ry000gjwumbgnk3fdy" role="tab" data-toggle="collapse" href="#collapse-ckhge96ry000gjwumbgnk3fdy"
-        aria-expanded="false"
-      >
-        学习记录
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      <a href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="category-count col-2 col-md-1">
-        <i class="iconfont icon-articles"></i>
-        <span>1</span>
-      </a>
-      <div class="category-collapse">
-        
-          
-  <div id="collapse-ckhge96ry000gjwumbgnk3fdy" class="collapse in" role="tabpanel"
-       aria-labelledby="heading-ckhge96ry000gjwumbgnk3fdy">
-    
-    
-    
-      
-      
-        <a href="/2020/11/11/%E7%B1%BB%E4%B8%8E%E6%96%B9%E6%B3%95/" class="list-group-item list-group-item-action">
-          <span class="category-post">类与方法</span>
-        </a>
-      
-    
-  </div>
+		D2：
+			Person person = <span class="hljs-keyword">new</span> Person();
+			person.name = <span class="hljs-string">&quot;王健林&quot;</span>;
+			person.sayHello(name:<span class="hljs-string">&quot;王思聪&quot;</span>);
 
-        
-      </div>
-    </div>
-  
-</div>
+</code></pre>
 
-              </div>
+
+<hr>
+<p>写在后面：<br></br>&emsp;&emsp;<br>    由于最近事情比较多，要跑步，要洗衣服，要洗鞋子，要吃饭，要上课，要预习，我这并不是为自己找借口，我没找到一个时间都会不停的学习，不停的敲代码，虽然很累但是生活很充实，这破电脑又要没电了，真是醉了，但生活还得继续呀！！！！！！！！！！！！！！！！！！！！！！！！加油！！！！！！<br>    </br>&emsp;&emsp;<br>    还有就是Github的服务器是真的慢，如果有时间一定要找个树莓派来做服务器，但是网线怎么办，还得思考思考。<br>     </br>&emsp;&emsp;<br>     其实我写了很多笔记，但是更新为什么这么慢，因为我在挤牙膏呀！！！！<br>      </br>&emsp;&emsp;<br>      又到了11点，告辞！最后再弱弱说一句，我的博客好垃圾呀，没有别人的炫酷，如果有时间我一定会帮你加上几个功能！！！！！！</p>
+<hr>
+<p><del>我正在黑暗中摸索前行，每一盏我点亮的路灯下都有我沾满泥垢的掌印，但光亮终会散满我所幻想的世界。</del></p>
+
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/11/12/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81%E2%80%94%E2%80%94%E5%B0%81%E8%A3%85/">
+                        <span class="hidden-mobile">面向对象的三大特征——封装</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -378,9 +386,15 @@
 
 
 
+  <script  src="https://cdn.staticfile.org/tocbot/4.12.0/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.3.0/anchor.min.js" ></script>
 
 
 
