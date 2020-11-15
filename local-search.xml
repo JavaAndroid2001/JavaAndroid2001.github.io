@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>Scanner的进阶使用</title>
+    <link href="/2020/11/15/Scanner%E7%9A%84%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8/"/>
+    <url>/2020/11/15/Scanner%E7%9A%84%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Scanner的进阶使用"><a href="#Scanner的进阶使用" class="headerlink" title="Scanner的进阶使用"></a>Scanner的进阶使用</h2><hr><p>Scanner类的功能，可以实现键盘输入数据，到程序当中。</p><p>Scanner属于引用数据类型</p><p>引用类型的一般使用步骤：</p><p>1.导包<br></br>&emsp;&emsp;<br>improt 包路径.类名称；<br></br>&emsp;&emsp;<br>如果需要使用目标类，和当前类位于同一个包下，则可以省略导报语句不写。<br></br>&emsp;&emsp;<br>只有java.Lang包下的内容不需要导包，其他的包都需要improt语句。</p><p>2.创建<br></br>&emsp;&emsp;<br>类名称 对象名 = new 类名称();</p><p>3.使用<br></br>&emsp;&emsp;<br>对象名.成员方法名()<br></br>&emsp;&emsp;<br>获取键盘输入的一个int数字： int num = sc.nextInt();<br></br>&emsp;&emsp;<br>获取键盘输入的一个字符串：String str = sc.next();</p><hr><p>今天很累很累，感觉自己像是个废物，学了这么多，做个题就卡壳了，要一步一步脚踏实地<br></br></br><br>知识学习就停留在这把，明天更新小练习<br></br></br><br>明天继续刷题巩固</p><hr><p><del>我正在黑暗中摸索前行，每一盏我点亮的路灯下都有我沾满泥垢的掌印，但光亮终会散满我所幻想的世界。</del></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>完整方法的构造</title>
     <link href="/2020/11/14/%E5%AE%8C%E6%95%B4%E6%96%B9%E6%B3%95%E7%9A%84%E6%9E%84%E9%80%A0/"/>
     <url>/2020/11/14/%E5%AE%8C%E6%95%B4%E6%96%B9%E6%B3%95%E7%9A%84%E6%9E%84%E9%80%A0/</url>
