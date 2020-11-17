@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>关于今天2020.11.16 - ProgWeb</title>
+  <title>2020.11.17日志 - ProgWeb</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
 
@@ -162,7 +162,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="关于今天2020.11.16">
+            <span class="h2" id="subtitle" title="2020.11.17日志">
               
             </span>
 
@@ -172,8 +172,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-11-16 22:15" pubdate>
-        2020年11月16日 晚上
+      <time datetime="2020-11-17 22:30" pubdate>
+        2020年11月17日 晚上
       </time>
     </span>
   
@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      186 字
+      497 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2
+      6
        分钟
     </span>
   
@@ -224,13 +224,61 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">关于今天2020.11.16</h1>
+            <h1 style="display: none">2020.11.17日志</h1>
             
             <div class="markdown-body">
-              <h2 id="今日日程报告"><a href="#今日日程报告" class="headerlink" title="今日日程报告"></a>今日日程报告</h2><p></br>&emsp;&emsp;<br>今天在刷题，这个题我刷了半天，现在还在找解决思路，感觉是自己的懒，不愿意动脑子，老师也不回我，感觉很烦，主要原因应该是我自己懒，写一下代码又去吹吹牛逼。<br></br>&emsp;&emsp;<br>今天的问题所在就是我懒，爱吹牛。<br></br>&emsp;&emsp;<br>感觉自己写写还是可以写出来的<br></br>&emsp;&emsp;<br>这个明天问问老师先</p>
-<p></br>&emsp;&emsp;<br>总结：<br></br>&emsp;&emsp;&emsp;&emsp;<br>今天啥都没学到<br></br>&emsp;&emsp;&emsp;&emsp;<br>真是个废物</p>
+              <h2 id="关于今天的事情"><a href="#关于今天的事情" class="headerlink" title="关于今天的事情"></a>关于今天的事情</h2><hr>
+<p></br>&emsp;&emsp;<br>吐槽一下我的编程课老师，晚上8：30问的问题，现在10：31分，老师连回都不愿意回我，我特么，是我问的问题太NT了嘛，我吐了，看来老师今天是不会回我了。<br></br>&emsp;&emsp;<br>今天依旧没学习新知识，在复习，下午放学回来就一直在敲，坐了大概有5个小时。</p>
+<p>依然在做张三的问题现在把问题贴出来吧</p>
+<p></br>&emsp;&emsp;</p>
+<pre><code>/*
+张三一个月生活费800
+如果他的钱花到少于200就去搬砖
+搬砖一天+100
+记录张三这个月的支出和收入
+
+   1.程序可以一直运行，除非收到退出指令
+   2.当余额少于200的时候，输出3句去搬砖的提示
+
+   解决方法：
+        1.成员变量
+            1.1 张三初始化的钱数量，张三的天数
+        2.成员方法
+            2.1 张三每天花钱
+            2.2 张三每天搬砖能 +100
+            2.3 程序是一直运行的，除非接收到退出指令
+            2.4 余额少于200时，输出3句去搬砖的提示
+
+ */</code></pre>
+<p></br>&emsp;&emsp;</p>
+<p>下面是今天完成的部分代码，明天可以完善：</p>
+<pre><code class="hljs javascript">int day;
+      int money = <span class="hljs-number">800</span>;
+      <span class="hljs-built_in">String</span> work = <span class="hljs-literal">null</span>;
+      Scanner input = <span class="hljs-keyword">new</span> Scanner(System.in);
+      Random r = <span class="hljs-keyword">new</span> Random();
+      <span class="hljs-keyword">do</span> &#123;
+          System.out.println(<span class="hljs-string">&quot;请输入：消费、打工、退出&quot;</span>);
+          work = input.next();
+          <span class="hljs-keyword">if</span> (work.equals(<span class="hljs-string">&quot;打工&quot;</span>)) &#123;
+              money += <span class="hljs-number">100</span>;
+              int f1 = money;
+              System.out.println(<span class="hljs-string">&quot;您打工挣得&quot;</span> + f1);
+              System.out.println(<span class="hljs-string">&quot;您总资产现为：&quot;</span> + money);
+          &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (work.equals(<span class="hljs-string">&quot;消费&quot;</span>)) &#123;
+              int consumption = r.nextInt(<span class="hljs-number">801</span>);
+              money -= consumption;
+              System.out.println(<span class="hljs-string">&quot;这次消费了：&quot;</span> + consumption);
+              System.out.println(<span class="hljs-string">&quot;您总资产现为：&quot;</span> + money);
+          &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (work.equals(<span class="hljs-string">&quot;退出&quot;</span>)) &#123;
+              System.out.println(<span class="hljs-string">&quot;程序已经退出！&quot;</span>);
+              input.close();          <span class="hljs-comment">//释放内存</span>
+          &#125;
+      &#125;<span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>);</code></pre>
+
+
 <hr>
-<p><del>我正在黑暗中摸索前行，每一盏我点亮的路灯下都有我沾满泥垢的掌印，但光亮终会散满我所幻想的世界。</del></p>
+<p> <del>我正在黑暗中摸索前行，每一盏我点亮的路灯下都有我沾满泥垢的掌印，但光亮终会散满我所幻想的世界。</del></p>
 
             </div>
             <hr>
@@ -247,18 +295,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/11/17/2020-11-17%E6%97%A5%E5%BF%97/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">2020.11.17日志</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/11/15/Scanner%E7%9A%84%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8/">
-                        <span class="hidden-mobile">Scanner的进阶使用</span>
+                      <a href="/2020/11/16/%E5%85%B3%E4%BA%8E%E4%BB%8A%E5%A4%A92020-11-16/">
+                        <span class="hidden-mobile">关于今天2020.11.16</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
