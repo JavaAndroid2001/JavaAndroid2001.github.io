@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      497 字
+      695 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      6
+      9
        分钟
     </span>
   
@@ -252,29 +252,68 @@
  */</code></pre>
 <p></br>&emsp;&emsp;</p>
 <p>下面是今天完成的部分代码，明天可以完善：</p>
-<pre><code class="hljs javascript">int day;
-      int money = <span class="hljs-number">800</span>;
-      <span class="hljs-built_in">String</span> work = <span class="hljs-literal">null</span>;
-      Scanner input = <span class="hljs-keyword">new</span> Scanner(System.in);
-      Random r = <span class="hljs-keyword">new</span> Random();
-      <span class="hljs-keyword">do</span> &#123;
-          System.out.println(<span class="hljs-string">&quot;请输入：消费、打工、退出&quot;</span>);
-          work = input.next();
-          <span class="hljs-keyword">if</span> (work.equals(<span class="hljs-string">&quot;打工&quot;</span>)) &#123;
-              money += <span class="hljs-number">100</span>;
-              int f1 = money;
-              System.out.println(<span class="hljs-string">&quot;您打工挣得&quot;</span> + f1);
-              System.out.println(<span class="hljs-string">&quot;您总资产现为：&quot;</span> + money);
-          &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (work.equals(<span class="hljs-string">&quot;消费&quot;</span>)) &#123;
+<pre><code class="hljs javascript">public <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-title">main</span>(<span class="hljs-params"><span class="hljs-built_in">String</span>[] args</span>)</span> &#123;
+  int day = <span class="hljs-number">0</span>;
+  int money = <span class="hljs-number">800</span>;
+  int exp = <span class="hljs-number">0</span>;      <span class="hljs-comment">//总支出</span>
+  int income = <span class="hljs-number">0</span>;     <span class="hljs-comment">//总收入</span>
+  <span class="hljs-built_in">String</span> work = <span class="hljs-literal">null</span>;
+  Scanner input = <span class="hljs-keyword">new</span> Scanner(System.in);
+  Random r = <span class="hljs-keyword">new</span> Random();
+  <span class="hljs-keyword">do</span> &#123;
+      System.out.println(<span class="hljs-string">&quot;请输入：消费、打工、退出&quot;</span>);
+      work = input.next();
+      <span class="hljs-keyword">if</span> (work.equals(<span class="hljs-string">&quot;打工&quot;</span>)) &#123;
+          money += <span class="hljs-number">100</span>;           <span class="hljs-comment">//打工+100</span>
+          int im = money;         <span class="hljs-comment">//这次打工的收入</span>
+          income = im;            <span class="hljs-comment">//把这次的钱传给总收入</span>
+          int f1 = money;
+          System.out.println(<span class="hljs-string">&quot;您打工挣得&quot;</span> + f1);
+          System.out.println(<span class="hljs-string">&quot;您总资产现为：&quot;</span> + money);
+      &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (work.equals(<span class="hljs-string">&quot;消费&quot;</span>)) &#123;
+          <span class="hljs-keyword">if</span> (money &gt;= <span class="hljs-number">200</span>) &#123;
+              int iq = <span class="hljs-number">0</span>;
+
               int consumption = r.nextInt(<span class="hljs-number">801</span>);
-              money -= consumption;
+              money -= consumption;        <span class="hljs-comment">//随机消费</span>
+              iq = consumption;           <span class="hljs-comment">//这次消费的钱传给一个储存变量</span>
+              exp = iq;                   <span class="hljs-comment">//把这次的钱传给总支出</span>
               System.out.println(<span class="hljs-string">&quot;这次消费了：&quot;</span> + consumption);
               System.out.println(<span class="hljs-string">&quot;您总资产现为：&quot;</span> + money);
-          &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (work.equals(<span class="hljs-string">&quot;退出&quot;</span>)) &#123;
-              System.out.println(<span class="hljs-string">&quot;程序已经退出！&quot;</span>);
-              input.close();          <span class="hljs-comment">//释放内存</span>
+
+          &#125;<span class="hljs-keyword">else</span> &#123;
+              System.out.println(<span class="hljs-string">&quot;您的余额已不足200元，总资产为：&quot;</span> + money);
+              System.out.println(<span class="hljs-string">&quot;打工去吧&quot;</span>);
+              System.out.println(<span class="hljs-string">&quot;打工去吧&quot;</span>);
+              System.out.println(<span class="hljs-string">&quot;打工去吧&quot;</span>);
+
           &#125;
-      &#125;<span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>);</code></pre>
+
+
+      &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (work.equals(<span class="hljs-string">&quot;退出&quot;</span>)) &#123;
+          System.out.println(<span class="hljs-string">&quot;程序已经退出！&quot;</span>);
+          System.exit(<span class="hljs-number">0</span>);     <span class="hljs-comment">//程序退出</span>
+          input.close();          <span class="hljs-comment">//结束输入</span>
+      &#125;
+
+     
+      <span class="hljs-keyword">if</span> (day &lt; <span class="hljs-number">30</span>)&#123;
+          day += <span class="hljs-number">1</span>;
+          System.out.println(<span class="hljs-string">&quot;今天是第：&quot;</span>+day+<span class="hljs-string">&quot;天&quot;</span>);
+      &#125;<span class="hljs-keyword">else</span> &#123;
+          day = <span class="hljs-number">0</span>;
+          System.out.println(<span class="hljs-string">&quot;月底了，这个月总支出：&quot;</span>+ exp);
+          exp = <span class="hljs-number">0</span>;
+          System.out.println(<span class="hljs-string">&quot;总收入为：&quot;</span>+ income);
+          income = <span class="hljs-number">0</span>;
+      &#125;
+  &#125;<span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>);
+
+  &#125;
+
+
+
+</code></pre>
 
 
 <hr>
