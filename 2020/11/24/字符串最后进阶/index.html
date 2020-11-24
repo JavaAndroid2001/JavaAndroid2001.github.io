@@ -15,9 +15,9 @@
   
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="ProgWeb">
   <meta name="keywords" content="">
-  <title>2020.11.23日志 - ProgWeb</title>
+  <title>字符串最后进阶 - ProgWeb</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
 
@@ -162,7 +162,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="2020.11.23日志">
+            <span class="h2" id="subtitle" title="字符串最后进阶">
               
             </span>
 
@@ -172,8 +172,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-11-23 22:28" pubdate>
-        2020年11月23日 晚上
+      <time datetime="2020-11-24 22:22" pubdate>
+        2020年11月24日 晚上
       </time>
     </span>
   
@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.4k 字
+      1.1k 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      19
+      16
        分钟
     </span>
   
@@ -224,95 +224,130 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">2020.11.23日志</h1>
+            <h1 style="display: none">字符串最后进阶</h1>
             
             <div class="markdown-body">
-              <h2 id="今天学费了天空之城的第一段的第一小小小节！！！"><a href="#今天学费了天空之城的第一段的第一小小小节！！！" class="headerlink" title="今天学费了天空之城的第一段的第一小小小节！！！"></a>今天学费了天空之城的第一段的第一小小小节！！！</h2><hr>
-<p>今日更新内容有：</p>
+              <h2 id="今晚要讲到字符串的最后进阶啦"><a href="#今晚要讲到字符串的最后进阶啦" class="headerlink" title="今晚要讲到字符串的最后进阶啦!"></a>今晚要讲到字符串的最后进阶啦!</h2><hr>
+<p>字符串的三种方法</p>
 <ul>
-<li>哲学</li>
-<li>字符串的进阶二（字符串要详学）</li>
-<li>今天好像没有练习题</li>
+<li> 字符串的截取方法</li>
+<li> 分割字符串的方法</li>
+<li> String当中与转换相关的常用方法</li>
 </ul>
+<p>下面将会详细展开方法使用的讲解：</p>
 <hr>
-<h4 id="哲学："><a href="#哲学：" class="headerlink" title="哲学："></a>哲学：</h4><p></br>&emsp;&emsp;<br>今天依旧是来说权力在交流当中起到的作用<br></br>&emsp;&emsp;<br></br>&emsp;&emsp;<br></br>&emsp;&emsp;<br></br>&emsp;&emsp;<br>很多时候我们接收到的意义！<br></br>&emsp;&emsp;<br>并不是我们分析和理解出来的<br></br>&emsp;&emsp;<br>而是被构建起来的！<br></br>&emsp;&emsp;<br>这个构建它围绕着意识形态，我们的权力结构，当然还有一些个人所知的信息差；<br></br>&emsp;&emsp;<br></br>&emsp;&emsp;<br></br>&emsp;&emsp;<br>分为：<br></br>&emsp;&emsp;<br></br>&emsp;&emsp;<br>    【发出者】意图意义（这个意义是由发起人想要表达的意义）<br>    </br>&emsp;&emsp;<br>    |<br>    </br>&emsp;&emsp;<br>    |<br>    </br>&emsp;&emsp;<br>    |<br>    </br>&emsp;&emsp;<br>    V<br>    </br>&emsp;&emsp;<br>   文本意义（这里是交流的媒介，意义通过这里传播给接受意义的人）<br>        </br>&emsp;&emsp;<br>    |<br>    </br>&emsp;&emsp;<br>    |<br>    </br>&emsp;&emsp;<br>    |<br>    </br>&emsp;&emsp;<br>    V<br>    </br>&emsp;&emsp;<br>   【接收者】解释意义，这里经过的媒介就相当于两者处在不同的（社会阶级）（认知范围）（意识形态）都会导致接收者所想得到的意义会有所不同</p>
-<p>   </br>&emsp;&emsp;<br>   </br>&emsp;&emsp;<br>   </br>&emsp;&emsp;<br>   若是想避免这种错误的出现：</p>
-<p>   </br>&emsp;&emsp;<br>   1.强调文本意义缩减范围（发出者）<br>   </br>&emsp;&emsp;<br>   2.我们要用更广大的语境来分析语义（接收者）<br>   </br>&emsp;&emsp;<br>   3.达成某种共识（集体共识）</p>
-<p>  </br>&emsp;&emsp;</br>&emsp;&emsp;</br>&emsp;&emsp;</br>&emsp;&emsp;</br>&emsp;&emsp;</br>&emsp;&emsp;<br>  还有一点需要特别注意！！！！！！<br>  </br>&emsp;&emsp;在交流当中！！！！<br>  </br>&emsp;&emsp;这是非常值得注意的！！！！！<br>  </br>&emsp;&emsp;==<br>  </br>&emsp;&emsp;直接谈及权力是非常危险的东西，会直接取消语言游戏的暧昧性，让权力关系赤裸裸的暴露出来</p>
+<h4 id="字符串的截取方法："><a href="#字符串的截取方法：" class="headerlink" title="字符串的截取方法："></a>字符串的截取方法：</h4><p></br>&emsp;&emsp;<br> public String substring(int index): 截取从参数位置一直到字符串末尾，返回新的字符串。<br> </br>&emsp;&emsp;<br>    public String substring(int begin,int end): 截取从begin开始，一直到end结束，中间的字符串。<br>    </br>&emsp;&emsp;<br>    备注：[begin,end],包含坐标，不包含右边。</p>
+<p>   重！：字符串永远不可变，如果你看着发生了改变，那这是开辟了新内存<br>     </br></p>
+<h6 id="代码演示区："><a href="#代码演示区：" class="headerlink" title="代码演示区："></a>代码演示区：</h6><pre><code class="hljs javascipt">
+public static void main(String[] args) &#123;
+       String str1 &#x3D; &quot;HelloWorld&quot;;
+       String str2 &#x3D; str1.substring(5);
+       System.out.println(str1);
+       System.out.println(str2);
+       System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+
+       String str3 &#x3D; str1.substring(4, 7);
+       System.out.println(str3);
+       System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+
+
+       &#x2F;&#x2F;下面这种写法，字符串的内容仍然是没有改变的
+       &#x2F;&#x2F;下面有两种字符串：“Hello”  ,   “Java”
+       &#x2F;&#x2F;本来的地址值是Hello的0x666
+       &#x2F;&#x2F;后来地址值变成了Java的0x999
+       String strA &#x3D; &quot;Hello&quot;;
+       System.out.println(strA);   &#x2F;&#x2F;Hello
+       strA &#x3D; &quot;Java&quot;;
+       System.out.println(strA);   &#x2F;&#x2F;Java
+   &#125;
+
+</code></pre>
+
+
 <hr>
-<h4 id="字符串的进阶操作二之获取"><a href="#字符串的进阶操作二之获取" class="headerlink" title="字符串的进阶操作二之获取"></a>字符串的进阶操作二之获取</h4><p>   String当中与获取相关的方法常有：<br>    </br>&emsp;&emsp;<br>    public int length():    获取字符串当中含有的字符个数，拿到字符串长度。<br>     </br>&emsp;&emsp;<br>    public String concat(String str):   将当前字符串和参数字符串拼接成为返回值新的字符串。<br>     </br>&emsp;&emsp;<br>    public char charAt(int index):  获取指定索引位置的单个字符。（索引从0开始）<br>     </br>&emsp;&emsp;<br>    public int indexOf(String str):     查找参数字符串在本字符串当中首次出现的索引位置，如果没有返回-1值<br>     </br>&emsp;&emsp;</p>
-<p></br>&emsp;&emsp;</p>
-<h5 id="代码详解："><a href="#代码详解：" class="headerlink" title="代码详解："></a>代码详解：</h5><pre><code class="hljs javascipt">public static void main(String[] args) &#123;
+<h4 id="分割字符串的方法："><a href="#分割字符串的方法：" class="headerlink" title="分割字符串的方法："></a>分割字符串的方法：</h4>  </br>
+   public String[] split(String regex):    &emsp;&emsp; 按照参数的规则，将字符串切分成为若干部分。
 
-        &#x2F;&#x2F; public int length():
-        &#x2F;&#x2F; 获取字符串长度
-        int length &#x3D; &quot;sadkjashdfkjahf&quot;.length();
-        System.out.println(&quot;字符串长度是：&quot;+length);
+<p>   注意事项：<br>     </br>&emsp;&emsp;<br>   split方法的参数其实就是一个“正则表达式”。<br>     </br>&emsp;&emsp;<br>   今天要注意：如果按照英文句点“.”进行切分，必须写“\.”（两个反斜杠）</p>
+   </br>
+   ###### 代码演示区：
 
-        &#x2F;&#x2F; 拼接字符串
-        &#x2F;&#x2F; public String concat(String str):
-        String str1 &#x3D; &quot;Hello&quot;;
-        String str2 &#x3D; &quot;World&quot;;
-        String str3 &#x3D; str1.concat(str2);
-        System.out.println(str1);
-        System.out.println(str2);
-        System.out.println(str3);
-        System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
-
-        &#x2F;&#x2F;  获取指定索引位置的单个字符
-        &#x2F;&#x2F; public char charAt(int index):
-        char ch &#x3D; &quot;Hello&quot;.charAt(1);        &#x2F;&#x2F;传入需要获取的索引
-        System.out.println(&quot;在1号索引位置的字符是：&quot;+ch);
-        System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+<pre><code class="hljs javascipt">
+    public static void main(String[] args) &#123;
+        String str1 &#x3D; &quot;aaa,bbb,ccc&quot;;
+        String[] array1 &#x3D; str1.split(&quot;,&quot;);
+        for (int i &#x3D; 0; i &lt; array1.length; i++) &#123;
+            System.out.println(array1[i]);
+        &#125;
+        System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
 
 
-       &#x2F;&#x2F; public int indexOf(String str):
-       &#x2F;&#x2F; 查找参数字符串在本来字符串当中出现的第一次索引位置
-       &#x2F;&#x2F; 如果根本没有，返回-1值
-        String original &#x3D; &quot;HelloHelloWorld&quot;;
-        int index &#x3D; original.indexOf(&quot;llo&quot;);&#x2F;&#x2F;如果找到了llo  后面则不会再找
-        System.out.println(&quot;第一次索引值是：&quot;+index);          &#x2F;&#x2F;2
-        System.out.println(&quot;HelloWorld&quot;.indexOf(&quot;abc&quot;));   &#x2F;&#x2F; -1
+            &#x2F;&#x2F;数组需要遍历！
+        String str2 &#x3D;&quot;AAA.BBB.CCC&quot;;
+        String[] array2 &#x3D; str2.split(&quot;\\.&quot;);
+        for (int i &#x3D; 0; i &lt; array2.length; i++) &#123;
+            System.out.println(array2[i]);
+        &#125;
+            &#x2F;&#x2F;错误写法
+&#x2F;&#x2F;         String[] array2 &#x3D; str2.split(&quot;.&quot;);
+&#x2F;&#x2F;         System.out.println(array2.length);          &#x2F;&#x2F;  0
+
 
     &#125;
 
 </code></pre>
 
+<hr>
+<h4 id="String当中与转换相关的常用方法"><a href="#String当中与转换相关的常用方法" class="headerlink" title="String当中与转换相关的常用方法:"></a>String当中与转换相关的常用方法:</h4><p></br>&emsp;&emsp;<br>   public char[] toCharArray(): 将当前字符串拆分为字符串数组作为返回值<br></br>&emsp;&emsp;<br>   public byte[] getBytes():    获得当前字符串底层的字节数组<br></br>&emsp;&emsp;<br>   public String replace(CharSequence oldString,CharSequence newString):<br></br>&emsp;&emsp;<br>   将所有出现的老字符串替换成为新的字符串，返回替换之后的新字符串<br></br>&emsp;&emsp;<br>   备注：CharSequence意思就是说可以接受字符串类型。</p>
+<h6 id="代码演示区：-1"><a href="#代码演示区：-1" class="headerlink" title="代码演示区："></a>代码演示区：</h6><pre><code class="hljs javascipt">
 
-<h4 id="字符串的进阶操作二之比较"><a href="#字符串的进阶操作二之比较" class="headerlink" title="字符串的进阶操作二之比较"></a>字符串的进阶操作二之比较</h4><p>   ==是进行对象的地址值比较，如果确实需要字符串的内容比较，可以使用两个方法<br>      </br>&emsp;&emsp;</p>
-<p>方法一：<br>   </br>&emsp;&emsp;<br>   public boolean equals(Object obj): 参数可以是任何对象，只有参数是一个字符串并且内容相同的才会给ture;否则返回false。<br>      </br>&emsp;&emsp;<br>   注意事项：<br>      </br>&emsp;&emsp;<br>   1.任何对象都能用Object进行接收。<br>      </br>&emsp;&emsp;<br>   2.equals方法具有对称性，也就是a.equals(b)和b.equals(a)效果一样<br>      </br>&emsp;&emsp;<br>   3.如果比较双方一个常量一个变量，推荐把常量字符串写在前面。<br>      </br>&emsp;&emsp;<br>      </br>&emsp;&emsp;<br>   推荐：”abc”.equals(str)<br>      </br>&emsp;&emsp;<br>      不推荐：str.equals(“abc”)</p>
-<p>方法二：<br>   </br>&emsp;&emsp;<br>    public boolean equalsIgnoreCase(String str)：忽略大小写，进行内容比较。</p>
-<h5 id="代码详解：-1"><a href="#代码详解：-1" class="headerlink" title="代码详解："></a>代码详解：</h5><pre><code class="hljs javascipt">
+
 public static void main(String[] args) &#123;
-       String str1 &#x3D; &quot;Hello&quot;;
-       String str2 &#x3D; &quot;Hello&quot;;
-       char[] charArray &#x3D; &#123;&#39;H&#39;,&#39;e&#39;,&#39;l&#39;,&#39;l&#39;,&#39;o&#39;&#125;;
-       String str3 &#x3D; new String(charArray);
+       &#x2F;&#x2F;转换成为字符串数组
+       char[] chars &#x3D; &quot;Hello&quot;.toCharArray();
+       &#x2F;&#x2F;打印chars的索引0
+       System.out.println(chars[0]);   &#x2F;&#x2F;H
+       &#x2F;&#x2F;打印chars数组的长度
+       System.out.println(chars.length); &#x2F;&#x2F;5
+       System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
 
-       System.out.println(str1.equals(str2));  &#x2F;&#x2F;true
-       System.out.println(str2.equals(str3));  &#x2F;&#x2F;true
-       System.out.println(str3.equals(&quot;Hello&quot;));  &#x2F;&#x2F;true       equals严格区分大小写
-       System.out.println(&quot;Hello&quot;.equals(str1));   &#x2F;&#x2F;true
+       &#x2F;&#x2F;转换为字节数组
+       byte[] bytes &#x3D; &quot;abc&quot;.getBytes();
+       &#x2F;&#x2F;遍历bytes里的底层字节数组           为97 98 99
+       for (int i &#x3D; 0; i &lt; bytes.length; i++) &#123;
+           System.out.println(bytes[i]);
+       &#125;
+       System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
 
 
-       String str4 &#x3D; &quot;hello&quot;;
-       System.out.println(str1.equals(str4));
-       System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+       &#x2F;&#x2F;字符串内容的替换
+       String str1 &#x3D; &quot;How do you do&quot;;
+       &#x2F;&#x2F;将所有&quot;o&quot; 替换为 &quot;*&quot;
+       String str2 &#x3D; str1.replace(&quot;o&quot;,&quot;*&quot;);
+       System.out.println(str1);
+       System.out.println(str2);
+       System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
 
-       String str5 &#x3D; null;
-       System.out.println(&quot;abc&quot;.equals(str5)); &#x2F;&#x2F;推荐: false
-       &#x2F;&#x2F;     System.out.println(str5.equals(&quot;abc&quot;)); &#x2F;&#x2F;不推荐: 报错，空指针异常NullPrinterException
 
-       String strA &#x3D; &quot;Java&quot;;
-       String strB &#x3D; &quot;java&quot;;
-       System.out.println(strA.equals(strB));  &#x2F;&#x2F; false: 严格区分大小写
-       System.out.println(strA.equalsIgnoreCase(str5));  &#x2F;&#x2F;true：忽略大小写，但是只对字母不区分，对中文会false
+
+       String lang1 &#x3D; &quot;会不会玩啊！你大爷的！你大爷的！你大爷的！&quot;;
+       String lang2 &#x3D; lang1.replace(&quot;你大爷的&quot;,&quot;****&quot;);
+       System.out.println(lang2);
+
+
+
+
+
 
 
    &#125;
+
+
 </code></pre>
 
 
+<hr>
+<h5 id="微微总结以下今日学琴："><a href="#微微总结以下今日学琴：" class="headerlink" title="微微总结以下今日学琴："></a>微微总结以下今日学琴：</h5><p></br>&emsp;&emsp;<br>感觉有一点点手感来了，但是找到的琴谱不全，现在也只能暂时跟着简普来学哈哈！还有今天早上没有记单词！！！！！<br></br>&emsp;&emsp;给自己记一次大过！！！！</p>
 <hr>
 <p><del>我正在黑暗中摸索前行，每一盏我点亮的路灯下都有我沾满泥垢的掌印，但光亮终会散满我所幻想的世界。</del></p>
 
@@ -321,6 +356,13 @@ public static void main(String[] args) &#123;
             <div>
               <div class="post-metas mb-3">
                 
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Java/">Java</a>
+                    
+                  </div>
                 
               </div>
               
@@ -331,18 +373,12 @@ public static void main(String[] args) &#123;
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/11/24/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9C%80%E5%90%8E%E8%BF%9B%E9%98%B6/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">字符串最后进阶</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/11/22/2020-11-22%E6%97%A5%E5%BF%97/">
-                        <span class="hidden-mobile">2020.11.22日志</span>
+                      <a href="/2020/11/23/2020-11-23%E6%97%A5%E5%BF%97/">
+                        <span class="hidden-mobile">2020.11.23日志</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
