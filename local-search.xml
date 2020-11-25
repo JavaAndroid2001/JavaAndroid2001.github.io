@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>字符串，类，数组练习题</title>
+    <link href="/2020/11/25/%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%8C%E7%B1%BB%EF%BC%8C%E6%95%B0%E7%BB%84%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    <url>/2020/11/25/%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%8C%E7%B1%BB%EF%BC%8C%E6%95%B0%E7%BB%84%E7%BB%83%E4%B9%A0%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<h2 id="今天就写了一道练习题，在复习过往知识呀！"><a href="#今天就写了一道练习题，在复习过往知识呀！" class="headerlink" title="今天就写了一道练习题，在复习过往知识呀！"></a>今天就写了一道练习题，在复习过往知识呀！</h2><hr><h4 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h4><p> </br>&emsp;&emsp;<br>   定义两个方法，把键入放到数组并按照一定格式拼接成一个字符串。<br>    </br>&emsp;&emsp;<br>   格式参照如下[word1#word2#word3]</p><h4 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h4><p> </br>&emsp;&emsp;</p> <pre><code class="hljs javascipt">   public static void main(String[] args) &#123;        &#x2F;&#x2F;调用sc          sc键入三个参数String类型的        getBig(sc());    &#125;        &#x2F;&#x2F;  键入三个数返回给sc    public static ArrayList&lt;String&gt; sc()&#123;        Scanner sc &#x3D; new Scanner(System.in);        System.out.println(&quot;请键入第一个数：&quot;);        String xx &#x3D; sc.next();        System.out.println(&quot;请键入第二个数：&quot;);        String aa &#x3D; sc.next();        System.out.println(&quot;请键入第三个数：&quot;);        String bb &#x3D; sc.next();        ArrayList&lt;String&gt; word &#x3D; new ArrayList&lt;&gt;();        word.add(xx);        word.add(aa);        word.add(bb);        for (int i &#x3D; 0; i &lt; word.size(); i++) &#123;            System.out.println(word.get(i));        &#125;        System.out.println(word.size());        System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);        return word;    &#125;    public static ArrayList&lt;Integer&gt; getBig (ArrayList&lt;String&gt; dyArray) &#123;                &#x2F;&#x2F;number是用来接受返回值的，不应该直接使用        ArrayList&lt;Integer&gt; number &#x3D; new ArrayList&lt;&gt;();        System.out.print(&quot;[&quot;);        for (int i &#x3D; 0; i &lt; dyArray.size(); i++) &#123;                &#x2F;&#x2F; 用get方法获得sc传入的字符串然后进行修改操作            System.out.print(&quot;word&quot;+dyArray.get(i)+&quot;#&quot;);        &#125;        System.out.print(&quot;]&quot;);        System.out.println(&quot; &quot;);        return number;    &#125;    &#x2F;&#x2F;            ArrayList&lt;String&gt; oo &#x3D; new ArrayList&lt;&gt;();&#x2F;&#x2F;            oo.add(&quot;AAA&quot;);&#x2F;&#x2F;            oo.add(&quot;BBB&quot;);&#x2F;&#x2F;            oo.add(&quot;CCC&quot;);&#x2F;&#x2F;            oo.add(&quot;DDD&quot;);    &#x2F;&#x2F;get表示获取索引值1的数    &#x2F;&#x2F;System.out.println(oo.get(1));&#125;</code></pre><hr><p><del>我正在黑暗中摸索前行，每一盏我点亮的路灯下都有我沾满泥垢的掌印，但光亮终会散满我所幻想的世界。</del></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>字符串最后进阶</title>
     <link href="/2020/11/24/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9C%80%E5%90%8E%E8%BF%9B%E9%98%B6/"/>
     <url>/2020/11/24/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9C%80%E5%90%8E%E8%BF%9B%E9%98%B6/</url>
