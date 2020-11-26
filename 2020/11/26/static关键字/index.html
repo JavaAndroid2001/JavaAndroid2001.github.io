@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>字符串，类，数组练习题 - ProgWeb</title>
+  <title>static关键字(未完) - ProgWeb</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
 
@@ -162,7 +162,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="字符串，类，数组练习题">
+            <span class="h2" id="subtitle" title="static关键字(未完)">
               
             </span>
 
@@ -172,8 +172,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-11-25 22:42" pubdate>
-        2020年11月25日 晚上
+      <time datetime="2020-11-26 22:48" pubdate>
+        2020年11月26日 晚上
       </time>
     </span>
   
@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      465 字
+      1k 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      7
+      13
        分钟
     </span>
   
@@ -224,72 +224,131 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">字符串，类，数组练习题</h1>
+            <h1 style="display: none">static关键字(未完)</h1>
             
             <div class="markdown-body">
-              <h2 id="今天就写了一道练习题，在复习过往知识呀！"><a href="#今天就写了一道练习题，在复习过往知识呀！" class="headerlink" title="今天就写了一道练习题，在复习过往知识呀！"></a>今天就写了一道练习题，在复习过往知识呀！</h2><hr>
-<h4 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h4><p> </br>&emsp;&emsp;<br>   定义两个方法，把键入放到数组并按照一定格式拼接成一个字符串。<br>    </br>&emsp;&emsp;<br>   格式参照如下[word1#word2#word3]</p>
-<h4 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h4><p> </br>&emsp;&emsp;</p>
- <pre><code class="hljs javascipt"> 
- 
- public static void main(String[] args) &#123;
-        &#x2F;&#x2F;调用sc          sc键入三个参数String类型的
-        getBig(sc());
+              <h2 id="今天学会万能的和弦！！能弹唱很多首歌，简直爱了爱了！！！"><a href="#今天学会万能的和弦！！能弹唱很多首歌，简直爱了爱了！！！" class="headerlink" title="今天学会万能的和弦！！能弹唱很多首歌，简直爱了爱了！！！"></a>今天学会万能的和弦！！能弹唱很多首歌，简直爱了爱了！！！</h2><hr>
+<p>今天学习了static这个关键字<br>static静态变量：<br>他的应用范围是方便在类里完成全局的一个改变<br>static静态方法：<br>它的应用我暂时还不知道，但是简单的知道作用就是可以直接通过    类名称.静态方法名来使用</p>
+<hr>
+<h5 id="下面是写在记事本的知识点："><a href="#下面是写在记事本的知识点：" class="headerlink" title="下面是写在记事本的知识点："></a>下面是写在记事本的知识点：</h5><p>  一旦使用static修饰成员方法，那么这就成为了静态方法，静态方法不属于对象，而是属于类的</p>
+<p>   如果没有static关键字，那么必须首先创建对象，然后通过对象才能使用它。<br>   如果有了static关键字，那么不需要创建对象，直接就能通过类名称来使用它</p>
+<p>   无论是成员变量，还是成员方法，如果有了static，都推荐使用类名称进行调用</p>
+<p>   //静态方法<br>//静态方法可以访问静态变量<br>问题：<br>1.静态不能直接访问非静态【重点】<br>    原因：因为在内存中【先】有静态内容，【后】有非静态内容。<br>“现任不知道后人，但是后人知道先人。”</p>
+<p>2.静态方法当中不能用this<br>    原因：this代表当前对象，通过谁调用的方法，谁就是当前对象。</p>
+<hr>
+<p>   下面为代码区：</p>
+<h6 id="静态变量Student："><a href="#静态变量Student：" class="headerlink" title="静态变量Student："></a>静态变量Student：</h6><pre><code class="hljs javascpit">
+public class Student &#123;
+    private int id;     &#x2F;&#x2F;学号
+    private String name;
+    private int age;
+    static String room;
+    private static int idCounter &#x3D; 0;   &#x2F;&#x2F;计数器
+
+
+    public Student() &#123;
+        this.id &#x3D; ++idCounter;
     &#125;
-
-        &#x2F;&#x2F;  键入三个数返回给sc
-    public static ArrayList&lt;String&gt; sc()&#123;
-        Scanner sc &#x3D; new Scanner(System.in);
-        System.out.println(&quot;请键入第一个数：&quot;);
-        String xx &#x3D; sc.next();
-        System.out.println(&quot;请键入第二个数：&quot;);
-        String aa &#x3D; sc.next();
-        System.out.println(&quot;请键入第三个数：&quot;);
-        String bb &#x3D; sc.next();
-        ArrayList&lt;String&gt; word &#x3D; new ArrayList&lt;&gt;();
-        word.add(xx);
-        word.add(aa);
-        word.add(bb);
-        for (int i &#x3D; 0; i &lt; word.size(); i++) &#123;
-            System.out.println(word.get(i));
-        &#125;
-        System.out.println(word.size());
-        System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
-        return word;
-    &#125;
-
-
-
-
-    public static ArrayList&lt;Integer&gt; getBig (ArrayList&lt;String&gt; dyArray) &#123;
-                &#x2F;&#x2F;number是用来接受返回值的，不应该直接使用
-        ArrayList&lt;Integer&gt; number &#x3D; new ArrayList&lt;&gt;();
-
-        System.out.print(&quot;[&quot;);
-        for (int i &#x3D; 0; i &lt; dyArray.size(); i++) &#123;
-                &#x2F;&#x2F; 用get方法获得sc传入的字符串然后进行修改操作
-            System.out.print(&quot;word&quot;+dyArray.get(i)+&quot;#&quot;);
-
-        &#125;
-        System.out.print(&quot;]&quot;);
-        System.out.println(&quot; &quot;);
-        return number;
+    public Student(String name, int age) &#123;
+        this.name &#x3D; name;
+        this.age &#x3D; age;
+        this.id &#x3D; ++idCounter;
 
     &#125;
+    public int getId() &#123;
+        return id;
+    &#125;
 
+    public void setId(int id) &#123;
+        this.id &#x3D; id;
+    &#125;
 
-    &#x2F;&#x2F;            ArrayList&lt;String&gt; oo &#x3D; new ArrayList&lt;&gt;();
-&#x2F;&#x2F;            oo.add(&quot;AAA&quot;);
-&#x2F;&#x2F;            oo.add(&quot;BBB&quot;);
-&#x2F;&#x2F;            oo.add(&quot;CCC&quot;);
-&#x2F;&#x2F;            oo.add(&quot;DDD&quot;);
-    &#x2F;&#x2F;get表示获取索引值1的数
-    &#x2F;&#x2F;System.out.println(oo.get(1));
+    public int getAge() &#123;
+        return age;
+    &#125;
+
+    public void setAge(int age) &#123;
+        this.age &#x3D; age;
+    &#125;
+
+    public String getName() &#123;
+        return name;
+    &#125;
+
+    public void setName(String name) &#123;
+        this.name &#x3D; name;
+    &#125;
+
+    public static String getRoom() &#123;
+        return room;
+    &#125;
+
+    public static void setRoom(String room) &#123;
+        Student.room &#x3D; room;
+    &#125;
 &#125;
 </code></pre>
 
 
 
+<h6 id="静态变量Static："><a href="#静态变量Static：" class="headerlink" title="静态变量Static："></a>静态变量Static：</h6><p>使用</p>
+<pre><code class="hljs javascpit">public class Static &#123;
+    public static void main(String[] args) &#123;
+        Student one &#x3D; new Student(&quot;卢本伟&quot;, 22);
+        &#x2F;&#x2F;只需要进行一次操作就好了
+        one.room &#x3D; &quot;101教室&quot;;
+
+        System.out.println(&quot;姓名：&quot;+one.getName()+&quot;，年龄：&quot;+one.getAge()+&quot;，教室：&quot;+one.room+&quot;，学号：&quot;+ one.getId());
+
+        Student two &#x3D; new Student(&quot;骚猪&quot;, 23);
+
+        System.out.println(&quot;姓名：&quot;+two.getName()+&quot;，年龄：&quot;+two.getAge()+&quot;，教室：&quot;+one.room+&quot;，学号：&quot;+ two.getId());
+
+    &#125;
+&#125;
+</code></pre>
+
+<h6 id="静态方法Static-1："><a href="#静态方法Static-1：" class="headerlink" title="静态方法Static_1："></a>静态方法Static_1：</h6><pre><code class="hljs javascpit">public class Static_1 &#123;
+    int num;&#x2F;&#x2F;成员变量
+    static int numStatic;&#x2F;&#x2F;静态变量
+    public void method()&#123;
+        System.out.println(&quot;这是一个成员方法&quot;);
+
+
+        &#x2F;&#x2F;成员方法可以直接访问成员变量
+        System.out.println(num);
+        &#x2F;&#x2F;成员方法可以直接访问静态变量
+        System.out.println(numStatic);
+        System.out.println(&quot;这是this自己：&quot;+this);
+    &#125;
+    public static void methodStatic()&#123;
+        System.out.println(&quot;这是一个静态方法&quot;);
+
+        &#x2F;&#x2F;静态方法不能直接访非静态【重点】
+    &#x2F;&#x2F;    System.out.println(num);      &#x2F;&#x2F;错误写法
+        &#x2F;&#x2F;静态方法可以访问静态变量
+        System.out.println(numStatic);
+    &#x2F;&#x2F;    System.out.println(this); &#x2F;&#x2F;错误写法  &#x2F;&#x2F;this代表当前对象
+    &#x2F;&#x2F;      static方法会被强制翻译成 类名称.静态方法名       this表示对象，而静态方法不需要对象，两者冲突
+    &#125;
+
+&#125;</code></pre>
+<h6 id="静态方法useStatic-1："><a href="#静态方法useStatic-1：" class="headerlink" title="静态方法useStatic_1："></a>静态方法useStatic_1：</h6><pre><code class="hljs javascpit">public static void main(String[] args) &#123;
+       Static_1 st1 &#x3D; new Static_1();&#x2F;&#x2F;首先创建对象
+       &#x2F;&#x2F;然后才能使用没有static关键字的内容
+       st1.method();
+
+       &#x2F;&#x2F;对于静态方法来说，可以通过对象名进行调用，也可以直接通过类名称来调用
+       st1.methodStatic();     &#x2F;&#x2F;正确，不推荐，这种写法在编译之后也会被javac翻译成为“类名称.静态方法名”
+       Static_1.methodStatic();&#x2F;&#x2F;正确，推荐
+
+       &#x2F;&#x2F;对于本类当中的静态方法，可以省略类名称
+       myMethod();
+       useStatic_1.myMethod();&#x2F;&#x2F;完全等效
+   &#125;
+   public static void myMethod()&#123;
+       System.out.println(&quot;这是自己的方法&quot;);
+   &#125;</code></pre>
 <hr>
 <p><del>我正在黑暗中摸索前行，每一盏我点亮的路灯下都有我沾满泥垢的掌印，但光亮终会散满我所幻想的世界。</del></p>
 
@@ -308,18 +367,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/11/26/static%E5%85%B3%E9%94%AE%E5%AD%97/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">static关键字(未完)</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/11/24/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9C%80%E5%90%8E%E8%BF%9B%E9%98%B6/">
-                        <span class="hidden-mobile">字符串最后进阶</span>
+                      <a href="/2020/11/25/%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%8C%E7%B1%BB%EF%BC%8C%E6%95%B0%E7%BB%84%E7%BB%83%E4%B9%A0%E9%A2%98/">
+                        <span class="hidden-mobile">字符串，类，数组练习题</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
