@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>面向对象的三大特征——封装 - ProgWeb</title>
+  <title>面向对象的三大特征——继承 - ProgWeb</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
 
@@ -162,7 +162,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="面向对象的三大特征——封装">
+            <span class="h2" id="subtitle" title="面向对象的三大特征——继承">
               
             </span>
 
@@ -172,8 +172,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-11-12 22:25" pubdate>
-        2020年11月12日 晚上
+      <time datetime="2020-11-30 22:46" pubdate>
+        2020年11月30日 晚上
       </time>
     </span>
   
@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      742 字
+      665 字
     </span>
   
 
@@ -224,105 +224,107 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">面向对象的三大特征——封装</h1>
+            <h1 style="display: none">面向对象的三大特征——继承</h1>
             
             <div class="markdown-body">
               <h2 id="面向对象的三大特征：封装，继承，多态。"><a href="#面向对象的三大特征：封装，继承，多态。" class="headerlink" title="面向对象的三大特征：封装，继承，多态。"></a>面向对象的三大特征：封装，继承，多态。</h2><hr>
-<h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><pre><code>封装性：
-    1.方法就是一种封装性
-    2.关键字pribate也是一种封装性
-pribate：
-    对对象进行封装，
-        pribate
-                    适用于解决一些问题
-    问题描述：定义类的年龄时，无法阻止不合理的数值被设置进来。
-    解决方案：用prvate进行修饰，那么本类当中仍然可以随意访问了。
+<h2 id="继承-1-1"><a href="#继承-1-1" class="headerlink" title="继承 1.1"></a>继承 1.1</h2><hr>
+<h5 id="记事本笔记："><a href="#记事本笔记：" class="headerlink" title="记事本笔记："></a>记事本笔记：</h5> </br>
+继承是多态的前提，如果没有继承，就没有多态。
+ </br>
 
-一旦使用了provate进行修饰，那么本类当中仍然可以随意访问。
-但是！超出本类范围之外就不能直接访问了。</code></pre>
-<p>封装就是将一些细节信息隐藏起来，对外界不可见。</p>
-<p>我们来看具体项目限制</p>
-<pre><code>        /*
-项目功能：1.要求使用private来定义成员变量
-        2.要求变量下定义时能够对变量进行可执行的判断方法操作和循环
-        3.使用另一个类来调用Demo01的成员变量以及成员方法
+<p>继承主要解决的问题就是： 共性抽取。<br> </br><br>继承关系当中的特点：<br> </br>&emsp;&emsp;<br>    1.子类可以拥有父类的“内容”<br>     </br>&emsp;&emsp;<br>    2.子类还可以拥有自己专有的“内容”</p>
+ </br>
+父类：
+ </br>&emsp;&emsp;
+    也可以叫基类、超类
+ </br>
+子类：
+ </br>&emsp;&emsp;
+    也可以叫派生类
 
-解决方法：1.先用类比来对此问题进行简单的思路构图建设
-            （1）学生的name，age，male,height,weight
-            （2）用两个类来完成程序
-         */</code></pre>
-<p>Demo01代码</p>
-<pre><code class="hljs javascript">package com.lei;
-<span class="hljs-comment">/*</span>
-<span class="hljs-comment">    项目功能：1.要求使用private来定义成员变量</span>
-<span class="hljs-comment">            2.要求变量下定义时能够对变量进行可执行的判断方法操作和循环</span>
-<span class="hljs-comment">            3.使用另一个类来调用Demo01的成员变量以及成员方法</span>
-<span class="hljs-comment"></span>
-<span class="hljs-comment">    解决方法：1.先用类比来对此问题进行简单的思路构图建设</span>
-<span class="hljs-comment">                （1）学生的name，age，male,height,weight</span>
-<span class="hljs-comment">                （2）用两个类来完成程序</span>
-<span class="hljs-comment"> */</span>
-public <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo01</span> </span>&#123;
-    <span class="hljs-comment">//成员变量</span>
-    private <span class="hljs-built_in">String</span> name;
-    private int age;
-    private boolean male;
-    private double height;
-    private double weight;
-    <span class="hljs-comment">//成员方法</span>
-    <span class="hljs-comment">//这时候需要 方法：set***   get***</span>
-    <span class="hljs-comment">//布尔型比较特殊：在获取返回值的时候只能用is***</span>
-    public <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-title">show</span>(<span class="hljs-params"></span>)</span>&#123;
-        System.out.println(<span class="hljs-string">&quot;姓名：&quot;</span>+name+<span class="hljs-string">&quot;   &quot;</span>+<span class="hljs-string">&quot;年龄：&quot;</span>+age+<span class="hljs-string">&quot;   &quot;</span>+<span class="hljs-string">&quot;是否为男性：&quot;</span>+male+<span class="hljs-string">&quot;身高：&quot;</span>+height+<span class="hljs-string">&quot;   &quot;</span>+<span class="hljs-string">&quot;体重：&quot;</span>+weight);
+
+<p> </br>&emsp;&emsp;<br>  </br>&emsp;&emsp;<br>   </br>&emsp;&emsp;</p>
+<p>继承的格式：<br> </br><br>/*<br> </br>&emsp;&emsp;<br>    在继承的关系中，“子类就是一个父类”。也就是说，子类可以被当作父亲看待<br></br>&emsp;&emsp;<br>    例如父类是员工，子类是讲师，那么“讲师就是一个员工”。关系：is-a</p>
+<p>  </br>&emsp;&emsp;<br>定义父类的格式：（一个普通的类定义）<br> </br><br>public class 父类名称{<br> </br>&emsp;&emsp; &emsp;&emsp;<br>        // …<br>         </br><br>}</p>
+ </br>
+子类定义的格式：
+ </br>&emsp;&emsp;
+public class 子类名称 extends 父类名称 {
+ </br>&emsp;&emsp; &emsp;&emsp;
+    // ...
+ </br>    
+} </br>
+*/
+
+
+<hr>
+<h5 id="代码区："><a href="#代码区：" class="headerlink" title="代码区："></a>代码区：</h5><h6 id="主程序："><a href="#主程序：" class="headerlink" title="主程序："></a>主程序：</h6><p>这段主要是父类子类的使用，还有重名变量，重名方法。还有的明天再更吧</p>
+<pre><code class="hljs javascipt">public static void main(String[] args) &#123;
+       Fu fu &#x3D; new Fu();   &#x2F;&#x2F;创建父类对象
+       System.out.println(fu.FuNum);
+       &#x2F;&#x2F;等号左边是谁，就优先用谁
+       System.out.println(fu.num); &#x2F;&#x2F;重名
+       System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+
+       Zi zi &#x3D; new Zi();   &#x2F;&#x2F;创建子类对象
+       &#x2F;&#x2F;这里继承了父类的FuNum
+       System.out.println(zi.FuNum);   &#x2F;&#x2F;使用父类的FuNum
+       System.out.println(zi.num);
+       System.out.println(zi.ZiNum);
+       System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+
+       &#x2F;&#x2F;等号左边是谁，就优先用谁
+       System.out.println(zi.num); &#x2F;&#x2F;重名
+
+
+       &#x2F;&#x2F;这个方法是子类的，优先用子类的，没有再向上找
+       zi.methodZi();  &#x2F;&#x2F; 这是子类的方法30
+       &#x2F;&#x2F;这个方法是父类定义的
+       zi.methodFu();  &#x2F;&#x2F; 这是父类的方法10
+
+
+
+
+   &#125;
+
+
+
+</code></pre>
+<h6 id="父类："><a href="#父类：" class="headerlink" title="父类："></a>父类：</h6><pre><code class="hljs javascipt">
+public class Fu &#123;
+
+    int num &#x3D; 10;
+    int FuNum &#x3D; 20;
+    public void methodFu()&#123;
+        &#x2F;&#x2F;使用的是父类当中的，不会向下找子类的
+        System.out.println(&quot;这是父类的方法&quot;+num);
     &#125;
-    public <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-title">setName</span>(<span class="hljs-params"><span class="hljs-built_in">String</span> nu1</span>)</span>&#123;
-        name = nu1;
-    &#125;
-    public <span class="hljs-built_in">String</span> <span class="hljs-function"><span class="hljs-title">getName</span>(<span class="hljs-params"></span>)</span>&#123;
-        <span class="hljs-keyword">return</span> name;
-    &#125;
-    public <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-title">setAge</span>(<span class="hljs-params">int nu2</span>)</span>&#123;
-        age = nu2;
-    &#125;
-    public int <span class="hljs-function"><span class="hljs-title">getAge</span>(<span class="hljs-params"></span>)</span>&#123;
-        <span class="hljs-keyword">return</span> age;
-    &#125;
-    public <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-title">setMale</span>(<span class="hljs-params">boolean nu3</span>)</span>&#123;
-        male = nu3;
-    &#125;
-    public boolean <span class="hljs-function"><span class="hljs-title">isMale</span>(<span class="hljs-params"></span>)</span>&#123;
-        <span class="hljs-keyword">return</span> male;
-    &#125;
-    public <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-title">setHeight</span>(<span class="hljs-params">double nu4</span>)</span>&#123;
-        height = nu4;
-    &#125;
-    public double <span class="hljs-function"><span class="hljs-title">getHeight</span>(<span class="hljs-params"></span>)</span>&#123;
-        <span class="hljs-keyword">return</span> height;
-    &#125;
-    public <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-title">setWeight</span>(<span class="hljs-params">double nu5</span>)</span>&#123;
-        weight = nu5;
-    &#125;
-    public double <span class="hljs-function"><span class="hljs-title">getWeight</span>(<span class="hljs-params"></span>)</span>&#123;
-        <span class="hljs-keyword">return</span> weight;
-    &#125;
+
+
+
 
 &#125;
 </code></pre>
-
-
-<hr>
-<p>Student代码：</p>
-<pre><code class="hljs javascript">
-public <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> </span>&#123;
-    public <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-title">main</span>(<span class="hljs-params"><span class="hljs-built_in">String</span>[] args</span>)</span> &#123;
-        Demo01 student = <span class="hljs-keyword">new</span> Demo01();
-        student.show();
+<h6 id="子类："><a href="#子类：" class="headerlink" title="子类："></a>子类：</h6><pre><code class="hljs javascipt">
+public class Zi extends Fu &#123;
+            &#x2F;&#x2F;继承父类
+    int num &#x3D; 30;
+    int ZiNum &#x3D; 50;
+    public void methodZi()&#123;
+        &#x2F;&#x2F;使用的是本类当中的num
+        System.out.println(&quot;这是子类的方法&quot;+num);
     &#125;
+
+
+
+
+&#125;
+
 
 </code></pre>
 
-<hr>
-<p>今天的时间不是很多，没来得及写，代码不是很全，现在22.39，宿舍已经熄灯，我还希望有更多的时间能够学习但是时间不允许了哈哈，因为电脑撑不住电，明天还有课，但是但是，明天一定一定完善这几段代码！！！<br></br></p>
+
 <hr>
 <p><del>我正在黑暗中摸索前行，每一盏我点亮的路灯下都有我沾满泥垢的掌印，但光亮终会散满我所幻想的世界。</del></p>
 
@@ -341,18 +343,12 @@ public <span class="hljs-class"><span class="hljs-keyword">class</span> <span cl
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/11/13/this%E7%9A%84%E4%BD%BF%E7%94%A8/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">this的使用</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/11/11/%E7%B1%BB%E4%B8%8E%E6%96%B9%E6%B3%95/">
-                        <span class="hidden-mobile">类与方法</span>
+                      <a href="/2020/11/29/Arrays%E5%92%8CMath%E7%9A%84%E4%BD%BF%E7%94%A8/">
+                        <span class="hidden-mobile">Arrays和Math的使用</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
