@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>继承+this+抽象1</title>
+    <link href="/2020/12/04/%E7%BB%A7%E6%89%BF-this-%E6%8A%BD%E8%B1%A11/"/>
+    <url>/2020/12/04/%E7%BB%A7%E6%89%BF-this-%E6%8A%BD%E8%B1%A11/</url>
+    
+    <content type="html"><![CDATA[<h2 id="继承的三个特点，this，抽象1"><a href="#继承的三个特点，this，抽象1" class="headerlink" title="继承的三个特点，this，抽象1"></a>继承的三个特点，this，抽象1</h2><hr><h4 id="继承的三个特点："><a href="#继承的三个特点：" class="headerlink" title="继承的三个特点："></a>继承的三个特点：</h4></br>特点1：</br>Java语言是单继承的</br>一个类的直接父类只能有唯一一个。</br></br></br>class A {}</br>class B extends A {}   //正确</br>class C {}</br>class D extends A,C {}    //错误<p></br></br></br></br><br>特点2：<br></br><br> Java语言可以多级继承。<br> </br><br>我有一个父亲，我父亲还有一个父亲，也就是爷爷。<br></br></br><br>最高类为        java.lang.Object<br></br><br>class A {}<br></br><br>class B extends A {}    //正确<br></br><br>class C extends B {}    //正确</p><p></br></br></br></br></p><p>特点3:<br></br><br>一个子类的直接父类是唯一的，但是一个父类可以拥有很多个子类。<br></br><br>可以有很多兄弟姐妹，生二胎。<br></br><br></br></p><p>class A {}<br></br><br>calss B extends A {}    //正确<br></br><br>class C extends A {}    //正确<br></br><br></br><br></br><br></br></p><h4 id="this"><a href="#this" class="headerlink" title="this:"></a>this:</h4></br>this关键字：</br>用法：</br>1.在本类的成员方法中，访问本类的成员变量。</br>2.在本类的成员方法中，访问本类的另一个成员方法。</br>3.在本类的构造方法中，访问本类的另一个构造方法。</br></br>在第三种用法当中要注意：</br>A. this(...)调用也必须是构造方法的第一个句子，唯一一个。</br>B. super和this两种构造调用，不能同时使用。<h5 id="代码区："><a href="#代码区：" class="headerlink" title="代码区："></a>代码区：</h5><pre><code class="hljs javascpit">class1 Fu:public class Fu &#123;    int num &#x3D; 99;&#125;***class2 Zi:public class Zi extends Fu&#123;    int num &#x3D; 20;    public Zi()&#123;        this(1);&#x2F;&#x2F;        super();  &#x2F;&#x2F;这一行不再赠送        &#x2F;&#x2F;this();           不能自己调用自己&#x2F;&#x2F;        this(1,2);&#x2F;&#x2F;错误写法    &#125;    public Zi(int n)&#123;        this(1,2);    &#125;    public Zi(int n,int m)&#123;        &#x2F;&#x2F;this();       不能循环调用！！！错误写法    &#125;    public  void showNum()&#123;        int num &#x3D; 10;        System.out.println(num);&#x2F;&#x2F;局部变量        System.out.println(this.num);&#x2F;&#x2F;本类中的成员变量        System.out.println(super.num);&#x2F;&#x2F;父类中的成员变量    &#125;    public void methodA()&#123;        System.out.println(&quot;AAA&quot;);    &#125;    public void methodB()&#123;        this.methodA();        System.out.println(&quot;BBB&quot;);    &#125;&#125;</code></pre><h4 id="抽象1："><a href="#抽象1：" class="headerlink" title="抽象1："></a>抽象1：</h4><h5 id="抽象的定义格式："><a href="#抽象的定义格式：" class="headerlink" title="抽象的定义格式："></a>抽象的定义格式：</h5><p>  抽象方法：就是加上abstract关键字，然后去掉大括号，直接分号结束。<br>  </br><br>    抽象类：抽象方法所在的类，必须是抽象类才行。在class之前写上abstract即可</p><h5 id="代码区：-1"><a href="#代码区：-1" class="headerlink" title="代码区："></a>代码区：</h5><pre><code class="hljs javascpit">public abstract class Bu &#123;        &#x2F;&#x2F;这是一个抽象方法，表示吃东西，但是具体吃什么（大括号的内容）不确定。        public abstract void eat();        &#x2F;&#x2F;这是普通的成员方法        public void normalMethod()&#123;        &#125;&#125;</code></pre><hr><p>这个世界充满了奇怪的问号和奇怪的感叹号，但是要坚强微笑的面对呀！！！^_^<br></br></br></br><br>这个世界其实更像是资本的交流，我想说，它其实本就是，即使即使，好吧，思考了很底层的原因，探究出来的，我更希望是什么都不知道，我想看不透这个世界，但是了解的更多，我的人物构型越发显得贫瘠，这般弱小，其实在精神的世界，everone too，everone too small。我不知道，精神和现实是否哪个更加的坚实，更加的强大，因为物质世界所需的，精神并不能满足人们的需求，事实往往就是如此，当你放下渴望，坦然面对时，你想要的终究会来到。</p><hr><p> <del>我正在黑暗中摸索前行，每一盏我点亮的路灯下都有我沾满泥垢的掌印，但光亮终会散满我所幻想的世界。</del></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>继承中构造方法的特点</title>
     <link href="/2020/12/03/%E7%BB%A7%E6%89%BF%E4%B8%AD%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E7%9A%84%E7%89%B9%E7%82%B9/"/>
     <url>/2020/12/03/%E7%BB%A7%E6%89%BF%E4%B8%AD%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E7%9A%84%E7%89%B9%E7%82%B9/</url>
