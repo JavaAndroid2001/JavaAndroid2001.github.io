@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>抽象(完) - ProgWeb</title>
+  <title>发红包案例 - ProgWeb</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
 
@@ -162,7 +162,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="抽象(完)">
+            <span class="h2" id="subtitle" title="发红包案例">
               
             </span>
 
@@ -172,8 +172,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-12-05 22:55" pubdate>
-        2020年12月5日 晚上
+      <time datetime="2020-12-06 22:38" pubdate>
+        2020年12月6日 晚上
       </time>
     </span>
   
@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      938 字
+      1.5k 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11
+      23
        分钟
     </span>
   
@@ -224,122 +224,204 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">抽象(完)</h1>
+            <h1 style="display: none">发红包案例</h1>
             
             <div class="markdown-body">
-              <h2 id="抽象方法和抽象类-完"><a href="#抽象方法和抽象类-完" class="headerlink" title="抽象方法和抽象类(完)"></a>抽象方法和抽象类(完)</h2><hr>
-<h4 id="记事本定义："><a href="#记事本定义：" class="headerlink" title="记事本定义："></a>记事本定义：</h4></br>
-抽象方法和抽象类的使用：
-</br>
-1. 不能直接创建new抽象对象。
-</br></br>
-2. 必须用一个子类来继承抽象父类。
-</br>
-3. 子类必须覆盖重写抽象父类当中所有的抽象方法。
-</br>
-覆盖重写（实现）：子类去掉抽象方法的abstract关键字，然后补上方法体大括号。
+              <h2 id="群主和成员收发红包案例"><a href="#群主和成员收发红包案例" class="headerlink" title="群主和成员收发红包案例"></a>群主和成员收发红包案例</h2><hr>
+<p>主要练习继承相关的知识</p>
+<h5 id="问题说明及解决思路："><a href="#问题说明及解决思路：" class="headerlink" title="问题说明及解决思路："></a>问题说明及解决思路：</h5><pre><code class="hljs javascipt">
+&#x2F;*          红包案例分析
+          群主发普通红包
+          群主发普通红包。某群多名成员，群主给成员发普通红包。普通红包规则：
+          1.群主的一笔金额，从群余额中扣除，平均分成n等份，让成员领取
+          2.成员领取红包后，保存到成员余额中
 
-<ol start="4">
-<li>创建子类对象进行使用。</li>
-</ol>
-<p></br></br></br></br></br></br><br>抽象类的注意事项：<br></br><br>1.抽象类不能创建对象，如果创建了，编译无法通过而报错。只能创建非抽象类的对象。<br></br>&emsp;&emsp;&emsp;&emsp;<br>    理解：假设创建了抽象类的对象，调用抽象的方法，而抽象方法没具体的方法体，没有意义<br>    </br><br>2.抽象类中，可以有构造方法，是供子类创建对象时，初始化父类成员使用的。<br></br>&emsp;&emsp;&emsp;&emsp;<br>    理解：子类的构造方法中，有默认的super(),需要访问父类构造方法。<br>    </br><br>3.抽象类中，不一定包含抽象方法，但是又抽象方法的类必定是抽象类。<br></br>&emsp;&emsp;&emsp;&emsp;<br>    理解：未包含抽象方法的抽象类，目的就是不想让调用者创建该类对象，通常用于某些特殊的类结构设计。<br>    </br><br>4.抽象类的子类，必须重写抽象父类中所有的抽象方法，否则，编译无法通过而报错。除非该子类也是抽象类。<br></br>&emsp;&emsp;&emsp;&emsp;<br>    理解：假设不重写所有抽象方法，则类中可能包含抽象方法。那么创建对象后，调用抽象的方法，没意义。<br></br></br></br></br></p>
-<p>爷爷类 —&gt; 父类Dog —&gt; 子类金毛Dog —&gt; 子类2哈Dog</p>
-<hr>
-<h5 id="代码区："><a href="#代码区：" class="headerlink" title="代码区："></a>代码区：</h5><pre><code class="hljs javascpit">class1	Fu:			
-		&#x2F;&#x2F;Max抽象父类
-&#x2F;&#x2F;爷爷类
-&#x2F;&#x2F;有两个抽象方法
-public abstract class Fu &#123;
-        public abstract void eat();     &#x2F;&#x2F;吃
-        public abstract void sleep();   &#x2F;&#x2F;睡
-&#125;
+          请根据描述，完成案例中所有类的定义以及指定类之间的继承关系，并完成发红包的操作
+       *&#x2F;
 
+      &#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;
+      &#x2F;&#x2F;                          案例分析思路
+      &#x2F;*
+          发红包的逻辑，三要素：
+          返回值类型：  ArrayList&lt;Integer&gt;
+          方法名称：   send
+          参数列表：   1.总共发多少钱            int totalMoney
+                     2.分成多少份              int count
+          public ArrayList&lt;Integer&gt; send(int totalMoney,int count)&#123;
+                                              &#x2F;&#x2F; 总金额      &#x2F;&#x2F;计数
+                 &#x2F;&#x2F; ......
+          &#125;
+      *&#x2F;
+      &#x2F;&#x2F;
+      &#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;
+      &#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;
+      &#x2F;&#x2F;                          案例分析思路
+      &#x2F;*
+          收红包的逻辑，三要素：
+          返回值类型：  void
+          方法名称：   receive         &#x2F;&#x2F;接收
+          参数列表：   ArrayList&lt;Integer&gt;
+          public void receive(ArrayList&lt;Integer&gt; list)&#123;
+                  &#x2F;&#x2F; ......
+          &#125;
+      *&#x2F;
+      &#x2F;&#x2F;
+      &#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;
+</code></pre>
 
+<h5 id="主方法："><a href="#主方法：" class="headerlink" title="主方法："></a>主方法：</h5><pre><code class="hljs javascipt">
+import java.util.ArrayList;
+&#x2F;&#x2F;主要练习继承相关的知识
 
-***
-
-
-
-class2 Dog:
-		&#x2F;&#x2F;子类也是一个抽象类
-&#x2F;&#x2F;父亲类
-&#x2F;&#x2F;只对一个抽象方法进行了处理
-public abstract class Dog extends Fu&#123;
-    @Override
-    public void eat() &#123;
-        System.out.println(&quot;狗吃骨头&quot;);
-    &#125;
-
-&#125;
-
-
-
-
-***
-
-
-class3 Ha2Dog:
-			&#x2F;&#x2F;孙子类
-		public class Ha2Dog extends Dog&#123;
-
-    @Override
-    public void sleep() &#123;
-        System.out.println(&quot;二哈睡觉嘿嘿嘿.......&quot;);
-    &#125;
-&#125;
-
-
-	
-***
-
-
-class4 GoldenDog:
-			&#x2F;&#x2F;孙子类2
-		public class GoldenDog extends Dog&#123;
-
-    @Override
-    public void sleep() &#123;
-        System.out.println(&quot;金毛睡觉呼呼呼.......&quot;);
-    &#125;
-&#125;
-
-
-
-***
-
-
-class5 DemoMain:
-			&#x2F;&#x2F;主方法
-      public class DemoMain &#123;
+public class MainRedPacket &#123;
     public static void main(String[] args) &#123;
-&#x2F;&#x2F;        Fu fu &#x3D; new Fu();  &#x2F;&#x2F;错误写法                 爷爷类
-&#x2F;&#x2F;        Dog dog &#x3D; new Dog();  &#x2F;&#x2F;也是错误写法            父亲类
-        &#x2F;&#x2F;但凡用abstract修饰的，不能直接new
-        Ha2Dog ha2Dog &#x3D; new Ha2Dog();
-        ha2Dog.eat();
-        ha2Dog.sleep();
-        System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
-        GoldenDog goldenDog &#x3D; new GoldenDog();
-        goldenDog.eat();
-        goldenDog.sleep();
+        &#x2F;&#x2F;创建群主，并分配100块钱
+        Manager manager &#x3D; new Manager(&quot;群主&quot;,100);
+
+        &#x2F;&#x2F;创建成员属性
+        Member one &#x3D; new Member(&quot;成员A&quot;,0);
+        Member two &#x3D; new Member(&quot;成员B&quot;,0);
+        Member three &#x3D; new Member(&quot;成员C&quot;,0);
+
+        manager.show();     &#x2F;&#x2F;显示群主信息        &#x2F;&#x2F;100
+        &#x2F;&#x2F;显示成员信息
+        one.show();         &#x2F;&#x2F;0
+        two.show();         &#x2F;&#x2F;0
+        three.show();       &#x2F;&#x2F;0
+        System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+
+
+        &#x2F;&#x2F;集合里装着红包
+        ArrayList&lt;Integer&gt; redList &#x3D; manager.send(20,3);
+                                                            &#x2F;&#x2F;从集合拿出20，分成3份，调用send方法使用，并放入redList集合当中
+        &#x2F;&#x2F;三个普通成员收红包
+        one.receive(redList);
+        two.receive(redList);
+        three.receive(redList);
+        manager.show(); &#x2F;&#x2F;100 - 20 &#x3D; 80
+        &#x2F;&#x2F;显示三个人的红包
+        one.show();
+        two.show();
+        three.show();
+
+
     &#125;
 &#125;
-
 
 
 </code></pre>
 
 
-<hr>
-<h5 id="今日自我总结："><a href="#今日自我总结：" class="headerlink" title="今日自我总结："></a>今日自我总结：</h5> </br>
-今天的知识点不多，更得快，（简称浪费时间没学到）
- </br> </br>
-不过还是有学到东西的，比如，遇事要淡定！！！不能着急！！！我一定要记住了！！！沉重沉稳！！！这是一个自我提升的经历和阶段，我要努力提升自己呀！！！记住记住！！！遇事不慌不忙，一定要淡定沉稳，做事温柔优雅解决！！！优雅永不过时。
- </br> </br>
-还有就是今天浪费的时间有些多，让我想想在哪浪费了的，好像是玩手机，因为在刷看点就在今晚的时候，遇事绝对不要慌!绝对不要慌！记住！绝对不要慌！！！！！！
+<h5 id="公用父类："><a href="#公用父类：" class="headerlink" title="公用父类："></a>公用父类：</h5><pre><code class="hljs javascipt">&#x2F;&#x2F;公共父类
+public class User &#123;
+    private String name;    &#x2F;&#x2F;姓名
+    private int money;      &#x2F;&#x2F;余额，也就是当前用户拥有的钱数
+
+    public User() &#123;
+    &#125;
+
+    public User(String name, int money) &#123;
+        this.name &#x3D; name;
+        this.money &#x3D; money;
+    &#125;
+    &#x2F;&#x2F;展示一下当前用户有多少钱
+    public void show()&#123;
+        System.out.println(&quot;我叫：&quot; +name+&quot;,我有多少钱：&quot;+money);
+    &#125;
+
+    public String getName() &#123;
+        return name;
+    &#125;
+
+    public void setName(String name) &#123;
+        this.name &#x3D; name;
+    &#125;
+
+    public int getMoney() &#123;
+        return money;
+    &#125;
+
+    public void setMoney(int money) &#123;
+        this.money &#x3D; money;
+    &#125;
+&#125;
+</code></pre>
+
+<h5 id="群主类："><a href="#群主类：" class="headerlink" title="群主类："></a>群主类：</h5><pre><code class="hljs javascipt">
+import java.util.ArrayList;
+
+&#x2F;&#x2F;群主的类
+public class Manager extends User&#123;
+                &#x2F;&#x2F;经理
+    public Manager()&#123;
+        &#x2F;&#x2F;super();
+    &#125;
+
+    public Manager(String name, int money) &#123;
+        super(name, money);
+    &#125;
+    public ArrayList&lt;Integer&gt; send(int totalMoney,int count)&#123;
+        &#x2F;&#x2F;首先需要一个集合，用来存储若干个红包的金额
+        ArrayList&lt;Integer&gt; redList &#x3D; new ArrayList&lt;&gt;();
+
+        &#x2F;&#x2F;首先看一下群主自己有多少钱
+        int leftMoney &#x3D; super.getMoney();       &#x2F;&#x2F;群主当前余额
+        if (totalMoney &gt; leftMoney)&#123;
+            System.out.println(&quot;余额不足&quot;);
+            return redList;  &#x2F;&#x2F;返回空集合
+        &#125;
+        &#x2F;&#x2F;扣钱，其实就是重新设置余额
+        super.setMoney(leftMoney - totalMoney);
+
+        &#x2F;&#x2F;发红包需要平均拆分成为count份
+        int avg &#x3D; totalMoney &#x2F; count;
+        int mod &#x3D; totalMoney % count;   &#x2F;&#x2F;余数，也就是甩下的零头
+        
+        &#x2F;&#x2F;除不开的零头，包在最后一个红包当中
+        &#x2F;&#x2F;下面把红包一个一个放到集合当中
+        for (int i &#x3D; 0; i &lt; count - 1; i++) &#123;
+            redList.add(avg);
+        &#125;
+        &#x2F;&#x2F;最后一个红包
+        int last &#x3D; avg + mod;
+        redList.add(last);
+
+        return redList;
+    &#125;
+&#125;
+</code></pre>
+
+<h5 id="会员类："><a href="#会员类：" class="headerlink" title="会员类："></a>会员类：</h5><pre><code class="hljs javascipt">
+public class Member extends User&#123;
+                &#x2F;&#x2F;会员
+
+    public Member() &#123;
+    &#125;
+
+    public Member(String name, int money) &#123;
+        super(name, money);
+    &#125;
+
+    public void receive(ArrayList&lt;Integer&gt; list) &#123;
+        &#x2F;&#x2F;从多个红包当中随便抽取一个，给我自己
+        &#x2F;&#x2F;随机获取一个集合当中的索引编号
+        int index &#x3D; new Random().nextInt(list.size());
+        &#x2F;&#x2F;根据索引，从集合当中删除，并且得到被删除的红包，给我自己
+        int delta &#x3D; list.remove(index);
+        &#x2F;&#x2F;当前成员自己本来有多少钱：
+        int money &#x3D; super.getMoney();
+        &#x2F;&#x2F;加法，并且重新设置回去
+        super.setMoney(money + delta);
+    &#125;
+&#125;
+
+</code></pre>
+
 
 <hr>
-<p> <del>我正在黑暗中摸索前行，每一盏我点亮的路灯下都有我沾满泥垢的掌印，但光亮终会散满我所幻想的世界。</del></p>
+<p>总结今日：<br></br>&emsp;&emsp;<br>也不知道今天干啥了，感觉时间过得很快，今晚就更了个发红包案例，还没有完全理解就匆匆发出来了。<br></br></br>&emsp;&emsp;&emsp;&emsp;<br>下次注意！加油！</p>
+<hr>
+<p><del>我正在黑暗中摸索前行，每一盏我点亮的路灯下都有我沾满泥垢的掌印，但光亮终会散满我所幻想的世界。</del></p>
 
             </div>
             <hr>
@@ -356,18 +438,12 @@ class5 DemoMain:
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/12/06/%E5%8F%91%E7%BA%A2%E5%8C%85%E6%A1%88%E4%BE%8B/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">发红包案例</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/12/04/%E7%BB%A7%E6%89%BF-this-%E6%8A%BD%E8%B1%A11/">
-                        <span class="hidden-mobile">继承+this+抽象1</span>
+                      <a href="/2020/12/05/%E6%8A%BD%E8%B1%A1-%E5%AE%8C/">
+                        <span class="hidden-mobile">抽象(完)</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
