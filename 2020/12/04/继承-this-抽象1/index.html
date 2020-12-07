@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      826 字
+      801 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      10
+      9
        分钟
     </span>
   
@@ -268,9 +268,9 @@ A. this(...)调用也必须是构造方法的第一个句子，唯一一个。
 </br>
 B. super和this两种构造调用，不能同时使用。
 
-<h5 id="代码区："><a href="#代码区：" class="headerlink" title="代码区："></a>代码区：</h5><pre><code class="hljs javascpit">class1 Fu:
-		public class Fu &#123;
-    int num &#x3D; 99;
+<h5 id="代码区："><a href="#代码区：" class="headerlink" title="代码区："></a>代码区：</h5><pre><code class="hljs java">class1 Fu:
+		<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Fu</span> </span>&#123;
+    <span class="hljs-keyword">int</span> num = <span class="hljs-number">99</span>;
 &#125;
 
 
@@ -280,32 +280,32 @@ B. super和this两种构造调用，不能同时使用。
 
 
 class2 Zi:
-		public class Zi extends Fu&#123;
-    int num &#x3D; 20;
-    public Zi()&#123;
-        this(1);
-&#x2F;&#x2F;        super();  &#x2F;&#x2F;这一行不再赠送
-        &#x2F;&#x2F;this();           不能自己调用自己
-&#x2F;&#x2F;        this(1,2);&#x2F;&#x2F;错误写法
+		<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Zi</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Fu</span></span>&#123;
+    <span class="hljs-keyword">int</span> num = <span class="hljs-number">20</span>;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Zi</span><span class="hljs-params">()</span></span>&#123;
+        <span class="hljs-keyword">this</span>(<span class="hljs-number">1</span>);
+<span class="hljs-comment">//        super();  //这一行不再赠送</span>
+        <span class="hljs-comment">//this();           不能自己调用自己</span>
+<span class="hljs-comment">//        this(1,2);//错误写法</span>
     &#125;
-    public Zi(int n)&#123;
-        this(1,2);
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Zi</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span></span>&#123;
+        <span class="hljs-keyword">this</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);
     &#125;
-    public Zi(int n,int m)&#123;
-        &#x2F;&#x2F;this();       不能循环调用！！！错误写法
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Zi</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n,<span class="hljs-keyword">int</span> m)</span></span>&#123;
+        <span class="hljs-comment">//this();       不能循环调用！！！错误写法</span>
     &#125;
-    public  void showNum()&#123;
-        int num &#x3D; 10;
-        System.out.println(num);&#x2F;&#x2F;局部变量
-        System.out.println(this.num);&#x2F;&#x2F;本类中的成员变量
-        System.out.println(super.num);&#x2F;&#x2F;父类中的成员变量
+    <span class="hljs-function"><span class="hljs-keyword">public</span>  <span class="hljs-keyword">void</span> <span class="hljs-title">showNum</span><span class="hljs-params">()</span></span>&#123;
+        <span class="hljs-keyword">int</span> num = <span class="hljs-number">10</span>;
+        System.out.println(num);<span class="hljs-comment">//局部变量</span>
+        System.out.println(<span class="hljs-keyword">this</span>.num);<span class="hljs-comment">//本类中的成员变量</span>
+        System.out.println(<span class="hljs-keyword">super</span>.num);<span class="hljs-comment">//父类中的成员变量</span>
     &#125;
-    public void methodA()&#123;
-        System.out.println(&quot;AAA&quot;);
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">methodA</span><span class="hljs-params">()</span></span>&#123;
+        System.out.println(<span class="hljs-string">&quot;AAA&quot;</span>);
     &#125;
-    public void methodB()&#123;
-        this.methodA();
-        System.out.println(&quot;BBB&quot;);
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">methodB</span><span class="hljs-params">()</span></span>&#123;
+        <span class="hljs-keyword">this</span>.methodA();
+        System.out.println(<span class="hljs-string">&quot;BBB&quot;</span>);
     &#125;
 &#125;
 
@@ -315,11 +315,11 @@ class2 Zi:
 
 
 <h4 id="抽象1："><a href="#抽象1：" class="headerlink" title="抽象1："></a>抽象1：</h4><h5 id="抽象的定义格式："><a href="#抽象的定义格式：" class="headerlink" title="抽象的定义格式："></a>抽象的定义格式：</h5><p>  抽象方法：就是加上abstract关键字，然后去掉大括号，直接分号结束。<br>  </br><br>    抽象类：抽象方法所在的类，必须是抽象类才行。在class之前写上abstract即可</p>
-<h5 id="代码区：-1"><a href="#代码区：-1" class="headerlink" title="代码区："></a>代码区：</h5><pre><code class="hljs javascpit">		public abstract class Bu &#123;
-        &#x2F;&#x2F;这是一个抽象方法，表示吃东西，但是具体吃什么（大括号的内容）不确定。
-        public abstract void eat();
-        &#x2F;&#x2F;这是普通的成员方法
-        public void normalMethod()&#123;
+<h5 id="代码区：-1"><a href="#代码区：-1" class="headerlink" title="代码区："></a>代码区：</h5><pre><code class="hljs java">		<span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bu</span> </span>&#123;
+        <span class="hljs-comment">//这是一个抽象方法，表示吃东西，但是具体吃什么（大括号的内容）不确定。</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">eat</span><span class="hljs-params">()</span></span>;
+        <span class="hljs-comment">//这是普通的成员方法</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">normalMethod</span><span class="hljs-params">()</span></span>&#123;
 
         &#125;
 &#125;

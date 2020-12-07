@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.1k 字
+      828 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      16
+      11
        分钟
     </span>
   
@@ -238,27 +238,27 @@
 <hr>
 <h4 id="字符串的截取方法："><a href="#字符串的截取方法：" class="headerlink" title="字符串的截取方法："></a>字符串的截取方法：</h4><p></br>&emsp;&emsp;<br> public String substring(int index): 截取从参数位置一直到字符串末尾，返回新的字符串。<br> </br>&emsp;&emsp;<br>    public String substring(int begin,int end): 截取从begin开始，一直到end结束，中间的字符串。<br>    </br>&emsp;&emsp;<br>    备注：[begin,end],包含坐标，不包含右边。</p>
 <p>   重！：字符串永远不可变，如果你看着发生了改变，那这是开辟了新内存<br>     </br></p>
-<h6 id="代码演示区："><a href="#代码演示区：" class="headerlink" title="代码演示区："></a>代码演示区：</h6><pre><code class="hljs javascipt">
-public static void main(String[] args) &#123;
-       String str1 &#x3D; &quot;HelloWorld&quot;;
-       String str2 &#x3D; str1.substring(5);
+<h6 id="代码演示区："><a href="#代码演示区：" class="headerlink" title="代码演示区："></a>代码演示区：</h6><pre><code class="hljs java">
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+       String str1 = <span class="hljs-string">&quot;HelloWorld&quot;</span>;
+       String str2 = str1.substring(<span class="hljs-number">5</span>);
        System.out.println(str1);
        System.out.println(str2);
-       System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+       System.out.println(<span class="hljs-string">&quot;===============================&quot;</span>);
 
-       String str3 &#x3D; str1.substring(4, 7);
+       String str3 = str1.substring(<span class="hljs-number">4</span>, <span class="hljs-number">7</span>);
        System.out.println(str3);
-       System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+       System.out.println(<span class="hljs-string">&quot;================================&quot;</span>);
 
 
-       &#x2F;&#x2F;下面这种写法，字符串的内容仍然是没有改变的
-       &#x2F;&#x2F;下面有两种字符串：“Hello”  ,   “Java”
-       &#x2F;&#x2F;本来的地址值是Hello的0x666
-       &#x2F;&#x2F;后来地址值变成了Java的0x999
-       String strA &#x3D; &quot;Hello&quot;;
-       System.out.println(strA);   &#x2F;&#x2F;Hello
-       strA &#x3D; &quot;Java&quot;;
-       System.out.println(strA);   &#x2F;&#x2F;Java
+       <span class="hljs-comment">//下面这种写法，字符串的内容仍然是没有改变的</span>
+       <span class="hljs-comment">//下面有两种字符串：“Hello”  ,   “Java”</span>
+       <span class="hljs-comment">//本来的地址值是Hello的0x666</span>
+       <span class="hljs-comment">//后来地址值变成了Java的0x999</span>
+       String strA = <span class="hljs-string">&quot;Hello&quot;</span>;
+       System.out.println(strA);   <span class="hljs-comment">//Hello</span>
+       strA = <span class="hljs-string">&quot;Java&quot;</span>;
+       System.out.println(strA);   <span class="hljs-comment">//Java</span>
    &#125;
 
 </code></pre>
@@ -272,25 +272,25 @@ public static void main(String[] args) &#123;
    </br>
    ###### 代码演示区：
 
-<pre><code class="hljs javascipt">
-    public static void main(String[] args) &#123;
-        String str1 &#x3D; &quot;aaa,bbb,ccc&quot;;
-        String[] array1 &#x3D; str1.split(&quot;,&quot;);
-        for (int i &#x3D; 0; i &lt; array1.length; i++) &#123;
+<pre><code class="hljs java">
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        String str1 = <span class="hljs-string">&quot;aaa,bbb,ccc&quot;</span>;
+        String[] array1 = str1.split(<span class="hljs-string">&quot;,&quot;</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; array1.length; i++) &#123;
             System.out.println(array1[i]);
         &#125;
-        System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+        System.out.println(<span class="hljs-string">&quot;================================&quot;</span>);
 
 
-            &#x2F;&#x2F;数组需要遍历！
-        String str2 &#x3D;&quot;AAA.BBB.CCC&quot;;
-        String[] array2 &#x3D; str2.split(&quot;\\.&quot;);
-        for (int i &#x3D; 0; i &lt; array2.length; i++) &#123;
+            <span class="hljs-comment">//数组需要遍历！</span>
+        String str2 =<span class="hljs-string">&quot;AAA.BBB.CCC&quot;</span>;
+        String[] array2 = str2.split(<span class="hljs-string">&quot;\\.&quot;</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; array2.length; i++) &#123;
             System.out.println(array2[i]);
         &#125;
-            &#x2F;&#x2F;错误写法
-&#x2F;&#x2F;         String[] array2 &#x3D; str2.split(&quot;.&quot;);
-&#x2F;&#x2F;         System.out.println(array2.length);          &#x2F;&#x2F;  0
+            <span class="hljs-comment">//错误写法</span>
+<span class="hljs-comment">//         String[] array2 = str2.split(&quot;.&quot;);</span>
+<span class="hljs-comment">//         System.out.println(array2.length);          //  0</span>
 
 
     &#125;
@@ -299,39 +299,39 @@ public static void main(String[] args) &#123;
 
 <hr>
 <h4 id="String当中与转换相关的常用方法"><a href="#String当中与转换相关的常用方法" class="headerlink" title="String当中与转换相关的常用方法:"></a>String当中与转换相关的常用方法:</h4><p></br>&emsp;&emsp;<br>   public char[] toCharArray(): 将当前字符串拆分为字符串数组作为返回值<br></br>&emsp;&emsp;<br>   public byte[] getBytes():    获得当前字符串底层的字节数组<br></br>&emsp;&emsp;<br>   public String replace(CharSequence oldString,CharSequence newString):<br></br>&emsp;&emsp;<br>   将所有出现的老字符串替换成为新的字符串，返回替换之后的新字符串<br></br>&emsp;&emsp;<br>   备注：CharSequence意思就是说可以接受字符串类型。</p>
-<h6 id="代码演示区：-1"><a href="#代码演示区：-1" class="headerlink" title="代码演示区："></a>代码演示区：</h6><pre><code class="hljs javascipt">
+<h6 id="代码演示区：-1"><a href="#代码演示区：-1" class="headerlink" title="代码演示区："></a>代码演示区：</h6><pre><code class="hljs java">
 
 
-public static void main(String[] args) &#123;
-       &#x2F;&#x2F;转换成为字符串数组
-       char[] chars &#x3D; &quot;Hello&quot;.toCharArray();
-       &#x2F;&#x2F;打印chars的索引0
-       System.out.println(chars[0]);   &#x2F;&#x2F;H
-       &#x2F;&#x2F;打印chars数组的长度
-       System.out.println(chars.length); &#x2F;&#x2F;5
-       System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+       <span class="hljs-comment">//转换成为字符串数组</span>
+       <span class="hljs-keyword">char</span>[] chars = <span class="hljs-string">&quot;Hello&quot;</span>.toCharArray();
+       <span class="hljs-comment">//打印chars的索引0</span>
+       System.out.println(chars[<span class="hljs-number">0</span>]);   <span class="hljs-comment">//H</span>
+       <span class="hljs-comment">//打印chars数组的长度</span>
+       System.out.println(chars.length); <span class="hljs-comment">//5</span>
+       System.out.println(<span class="hljs-string">&quot;=========================&quot;</span>);
 
-       &#x2F;&#x2F;转换为字节数组
-       byte[] bytes &#x3D; &quot;abc&quot;.getBytes();
-       &#x2F;&#x2F;遍历bytes里的底层字节数组           为97 98 99
-       for (int i &#x3D; 0; i &lt; bytes.length; i++) &#123;
+       <span class="hljs-comment">//转换为字节数组</span>
+       <span class="hljs-keyword">byte</span>[] bytes = <span class="hljs-string">&quot;abc&quot;</span>.getBytes();
+       <span class="hljs-comment">//遍历bytes里的底层字节数组           为97 98 99</span>
+       <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; bytes.length; i++) &#123;
            System.out.println(bytes[i]);
        &#125;
-       System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+       System.out.println(<span class="hljs-string">&quot;=========================&quot;</span>);
 
 
-       &#x2F;&#x2F;字符串内容的替换
-       String str1 &#x3D; &quot;How do you do&quot;;
-       &#x2F;&#x2F;将所有&quot;o&quot; 替换为 &quot;*&quot;
-       String str2 &#x3D; str1.replace(&quot;o&quot;,&quot;*&quot;);
+       <span class="hljs-comment">//字符串内容的替换</span>
+       String str1 = <span class="hljs-string">&quot;How do you do&quot;</span>;
+       <span class="hljs-comment">//将所有&quot;o&quot; 替换为 &quot;*&quot;</span>
+       String str2 = str1.replace(<span class="hljs-string">&quot;o&quot;</span>,<span class="hljs-string">&quot;*&quot;</span>);
        System.out.println(str1);
        System.out.println(str2);
-       System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+       System.out.println(<span class="hljs-string">&quot;===========================&quot;</span>);
 
 
 
-       String lang1 &#x3D; &quot;会不会玩啊！你大爷的！你大爷的！你大爷的！&quot;;
-       String lang2 &#x3D; lang1.replace(&quot;你大爷的&quot;,&quot;****&quot;);
+       String lang1 = <span class="hljs-string">&quot;会不会玩啊！你大爷的！你大爷的！你大爷的！&quot;</span>;
+       String lang2 = lang1.replace(<span class="hljs-string">&quot;你大爷的&quot;</span>,<span class="hljs-string">&quot;****&quot;</span>);
        System.out.println(lang2);
 
 

@@ -262,7 +262,7 @@
 </ul>
 <p>一种直接创建：<br>    </br>&emsp;&emsp;<br> String str =”Hello”;        // 右边直接用双引号</p>
 <hr>
-<h4 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h4><h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><pre><code class="hljs javascript"><span class="hljs-comment">/*</span>
+<h4 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h4><h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><pre><code class="hljs java"><span class="hljs-comment">/*</span>
 <span class="hljs-comment">    题目：</span>
 <span class="hljs-comment">        用一个大集合存入20个随机数数字，然后筛选其中的偶数元素，放到小集合中</span>
 <span class="hljs-comment">        ***要求使用自定义的方法实现筛选</span>
@@ -274,20 +274,20 @@
 
 </code></pre>
 
-<h5 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h5><pre><code class="hljs javascript">
-public <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-title">main</span>(<span class="hljs-params"><span class="hljs-built_in">String</span>[] args</span>)</span> &#123;
+<h5 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h5><pre><code class="hljs java">
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
           <span class="hljs-comment">//1. 创建大集合     bigAggregate</span>
       ArrayList&lt;Integer&gt; bigAggregate = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
       Random r = <span class="hljs-keyword">new</span> Random();
 
-      <span class="hljs-keyword">for</span> (int i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">20</span>; i++) &#123;
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">20</span>; i++) &#123;
           <span class="hljs-comment">//2. add方法来把随机数加进大集合里</span>
           bigAggregate.add(r.nextInt(<span class="hljs-number">100</span>)+<span class="hljs-number">1</span>);
       &#125;
           <span class="hljs-comment">//7. 先把bigAggregate传入getBig让它处理数据得到偶数</span>
       ArrayList&lt;Integer&gt; ok = getBig(bigAggregate);
           <span class="hljs-comment">//8. 用for循环遍历ok内的偶数</span>
-      <span class="hljs-keyword">for</span> (int i = <span class="hljs-number">0</span>; i &lt; ok.size(); i++) &#123;
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; ok.size(); i++) &#123;
           <span class="hljs-comment">//  错误写法：System.out.println(ok);    返回的依旧是： [98, 100, 40, 60, 66, 28, 8, 68]</span>
           <span class="hljs-comment">//要用get.方法</span>
           System.out.print(<span class="hljs-string">&quot;,&quot;</span>+ok.get(i));
@@ -298,13 +298,13 @@ public <span class="hljs-keyword">static</span> <span class="hljs-keyword">void<
 
   &#125;
          <span class="hljs-comment">//3.       ok       方法名是待会要用来调用的                  参数名是传入的参数要用到的</span>
-  public <span class="hljs-keyword">static</span> ArrayList&lt;Integer&gt; getBig (ArrayList&lt;Integer&gt; numbers)&#123;
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> ArrayList&lt;Integer&gt; <span class="hljs-title">getBig</span> <span class="hljs-params">(ArrayList&lt;Integer&gt; numbers)</span></span>&#123;
               <span class="hljs-comment">//4. 创建了一个小的集合来作为接收后返回给ok</span>
       ArrayList&lt;Integer&gt; small = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
 
-      <span class="hljs-keyword">for</span> (int i = <span class="hljs-number">0</span>; i &lt; numbers.size(); i++) &#123;
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numbers.size(); i++) &#123;
           <span class="hljs-comment">//5. 用get方法就能得到numbers给的数值</span>
-          int x = numbers.get(i);
+          <span class="hljs-keyword">int</span> x = numbers.get(i);
           <span class="hljs-keyword">if</span> (x % <span class="hljs-number">2</span>==<span class="hljs-number">0</span>)&#123;
               small.add(x);
           &#125;

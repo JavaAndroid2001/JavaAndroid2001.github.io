@@ -235,7 +235,7 @@
 <hr>
 <h3 id="下面是哲学："><a href="#下面是哲学：" class="headerlink" title="下面是哲学："></a>下面是哲学：</h3><h4 id="符号转译交流的基本规则："><a href="#符号转译交流的基本规则：" class="headerlink" title="符号转译交流的基本规则："></a>符号转译交流的基本规则：</h4><p>   ·权力结构<br>   </br><br>   ·交往预期<br>   </br><br>   ·欲望张力<br></br><br>这一章有两个对于平等权利结构很有名的句子：<br></br>&emsp;&emsp;<br>1.他人即是地狱<br></br>&emsp;&emsp;<br>2.世界上总有他人面对我在场，并且我总有为他存在的一维。<br></br>&emsp;&emsp;&emsp;&emsp;<br>这是本体论上的必然无疑性<br></br></br></br><br>还有对于交流中权力的流动的理解，这个到明天我再发吧，挤挤牙膏，嘻嘻</p>
 <hr>
-<h3 id="今日练习题"><a href="#今日练习题" class="headerlink" title="今日练习题"></a>今日练习题</h3><h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><pre><code class="hljs javascript">
+<h3 id="今日练习题"><a href="#今日练习题" class="headerlink" title="今日练习题"></a>今日练习题</h3><h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><pre><code class="hljs java">
 题目：定义四个学生对象，添加到集合，并遍历
 
 思路：
@@ -245,7 +245,7 @@
 <span class="hljs-number">4.</span> 将<span class="hljs-number">4</span>个学生对象添加到集合中：add
 <span class="hljs-number">5.</span> 遍历集合：<span class="hljs-keyword">for</span>、size、get</code></pre>
 
-<h5 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h5><pre><code class="hljs javascript">public <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-function"><span class="hljs-title">main</span>(<span class="hljs-params"><span class="hljs-built_in">String</span>[] args</span>)</span> &#123;
+<h5 id="解法："><a href="#解法：" class="headerlink" title="解法："></a>解法：</h5><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
     <span class="hljs-comment">// 1. 学生类创建好了</span>
 
 
@@ -270,7 +270,7 @@
 
 
     <span class="hljs-comment">// 5. 遍历对象student</span>
-    <span class="hljs-keyword">for</span> (int i = <span class="hljs-number">0</span>; i &lt; student.size(); i++) &#123;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; student.size(); i++) &#123;
         Student stu = student.get(i);
         System.out.println(<span class="hljs-string">&quot;姓名：&quot;</span> + stu.getName() + <span class="hljs-string">&quot;，年龄：&quot;</span>+stu.getAge());
     &#125;

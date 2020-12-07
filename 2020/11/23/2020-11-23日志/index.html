@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.4k 字
+      1.3k 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      19
+      16
        分钟
     </span>
   
@@ -242,37 +242,37 @@
 <hr>
 <h4 id="字符串的进阶操作二之获取"><a href="#字符串的进阶操作二之获取" class="headerlink" title="字符串的进阶操作二之获取"></a>字符串的进阶操作二之获取</h4><p>   String当中与获取相关的方法常有：<br>    </br>&emsp;&emsp;<br>    public int length():    获取字符串当中含有的字符个数，拿到字符串长度。<br>     </br>&emsp;&emsp;<br>    public String concat(String str):   将当前字符串和参数字符串拼接成为返回值新的字符串。<br>     </br>&emsp;&emsp;<br>    public char charAt(int index):  获取指定索引位置的单个字符。（索引从0开始）<br>     </br>&emsp;&emsp;<br>    public int indexOf(String str):     查找参数字符串在本字符串当中首次出现的索引位置，如果没有返回-1值<br>     </br>&emsp;&emsp;</p>
 <p></br>&emsp;&emsp;</p>
-<h5 id="代码详解："><a href="#代码详解：" class="headerlink" title="代码详解："></a>代码详解：</h5><pre><code class="hljs javascipt">public static void main(String[] args) &#123;
+<h5 id="代码详解："><a href="#代码详解：" class="headerlink" title="代码详解："></a>代码详解：</h5><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
 
-        &#x2F;&#x2F; public int length():
-        &#x2F;&#x2F; 获取字符串长度
-        int length &#x3D; &quot;sadkjashdfkjahf&quot;.length();
-        System.out.println(&quot;字符串长度是：&quot;+length);
+        <span class="hljs-comment">// public int length():</span>
+        <span class="hljs-comment">// 获取字符串长度</span>
+        <span class="hljs-keyword">int</span> length = <span class="hljs-string">&quot;sadkjashdfkjahf&quot;</span>.length();
+        System.out.println(<span class="hljs-string">&quot;字符串长度是：&quot;</span>+length);
 
-        &#x2F;&#x2F; 拼接字符串
-        &#x2F;&#x2F; public String concat(String str):
-        String str1 &#x3D; &quot;Hello&quot;;
-        String str2 &#x3D; &quot;World&quot;;
-        String str3 &#x3D; str1.concat(str2);
+        <span class="hljs-comment">// 拼接字符串</span>
+        <span class="hljs-comment">// public String concat(String str):</span>
+        String str1 = <span class="hljs-string">&quot;Hello&quot;</span>;
+        String str2 = <span class="hljs-string">&quot;World&quot;</span>;
+        String str3 = str1.concat(str2);
         System.out.println(str1);
         System.out.println(str2);
         System.out.println(str3);
-        System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+        System.out.println(<span class="hljs-string">&quot;============================&quot;</span>);
 
-        &#x2F;&#x2F;  获取指定索引位置的单个字符
-        &#x2F;&#x2F; public char charAt(int index):
-        char ch &#x3D; &quot;Hello&quot;.charAt(1);        &#x2F;&#x2F;传入需要获取的索引
-        System.out.println(&quot;在1号索引位置的字符是：&quot;+ch);
-        System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+        <span class="hljs-comment">//  获取指定索引位置的单个字符</span>
+        <span class="hljs-comment">// public char charAt(int index):</span>
+        <span class="hljs-keyword">char</span> ch = <span class="hljs-string">&quot;Hello&quot;</span>.charAt(<span class="hljs-number">1</span>);        <span class="hljs-comment">//传入需要获取的索引</span>
+        System.out.println(<span class="hljs-string">&quot;在1号索引位置的字符是：&quot;</span>+ch);
+        System.out.println(<span class="hljs-string">&quot;============================&quot;</span>);
 
 
-       &#x2F;&#x2F; public int indexOf(String str):
-       &#x2F;&#x2F; 查找参数字符串在本来字符串当中出现的第一次索引位置
-       &#x2F;&#x2F; 如果根本没有，返回-1值
-        String original &#x3D; &quot;HelloHelloWorld&quot;;
-        int index &#x3D; original.indexOf(&quot;llo&quot;);&#x2F;&#x2F;如果找到了llo  后面则不会再找
-        System.out.println(&quot;第一次索引值是：&quot;+index);          &#x2F;&#x2F;2
-        System.out.println(&quot;HelloWorld&quot;.indexOf(&quot;abc&quot;));   &#x2F;&#x2F; -1
+       <span class="hljs-comment">// public int indexOf(String str):</span>
+       <span class="hljs-comment">// 查找参数字符串在本来字符串当中出现的第一次索引位置</span>
+       <span class="hljs-comment">// 如果根本没有，返回-1值</span>
+        String original = <span class="hljs-string">&quot;HelloHelloWorld&quot;</span>;
+        <span class="hljs-keyword">int</span> index = original.indexOf(<span class="hljs-string">&quot;llo&quot;</span>);<span class="hljs-comment">//如果找到了llo  后面则不会再找</span>
+        System.out.println(<span class="hljs-string">&quot;第一次索引值是：&quot;</span>+index);          <span class="hljs-comment">//2</span>
+        System.out.println(<span class="hljs-string">&quot;HelloWorld&quot;</span>.indexOf(<span class="hljs-string">&quot;abc&quot;</span>));   <span class="hljs-comment">// -1</span>
 
     &#125;
 
@@ -282,31 +282,31 @@
 <h4 id="字符串的进阶操作二之比较"><a href="#字符串的进阶操作二之比较" class="headerlink" title="字符串的进阶操作二之比较"></a>字符串的进阶操作二之比较</h4><p>   ==是进行对象的地址值比较，如果确实需要字符串的内容比较，可以使用两个方法<br>      </br>&emsp;&emsp;</p>
 <p>方法一：<br>   </br>&emsp;&emsp;<br>   public boolean equals(Object obj): 参数可以是任何对象，只有参数是一个字符串并且内容相同的才会给ture;否则返回false。<br>      </br>&emsp;&emsp;<br>   注意事项：<br>      </br>&emsp;&emsp;<br>   1.任何对象都能用Object进行接收。<br>      </br>&emsp;&emsp;<br>   2.equals方法具有对称性，也就是a.equals(b)和b.equals(a)效果一样<br>      </br>&emsp;&emsp;<br>   3.如果比较双方一个常量一个变量，推荐把常量字符串写在前面。<br>      </br>&emsp;&emsp;<br>      </br>&emsp;&emsp;<br>   推荐：”abc”.equals(str)<br>      </br>&emsp;&emsp;<br>      不推荐：str.equals(“abc”)</p>
 <p>方法二：<br>   </br>&emsp;&emsp;<br>    public boolean equalsIgnoreCase(String str)：忽略大小写，进行内容比较。</p>
-<h5 id="代码详解：-1"><a href="#代码详解：-1" class="headerlink" title="代码详解："></a>代码详解：</h5><pre><code class="hljs javascipt">
-public static void main(String[] args) &#123;
-       String str1 &#x3D; &quot;Hello&quot;;
-       String str2 &#x3D; &quot;Hello&quot;;
-       char[] charArray &#x3D; &#123;&#39;H&#39;,&#39;e&#39;,&#39;l&#39;,&#39;l&#39;,&#39;o&#39;&#125;;
-       String str3 &#x3D; new String(charArray);
+<h5 id="代码详解：-1"><a href="#代码详解：-1" class="headerlink" title="代码详解："></a>代码详解：</h5><pre><code class="hljs java">
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+       String str1 = <span class="hljs-string">&quot;Hello&quot;</span>;
+       String str2 = <span class="hljs-string">&quot;Hello&quot;</span>;
+       <span class="hljs-keyword">char</span>[] charArray = &#123;<span class="hljs-string">&#x27;H&#x27;</span>,<span class="hljs-string">&#x27;e&#x27;</span>,<span class="hljs-string">&#x27;l&#x27;</span>,<span class="hljs-string">&#x27;l&#x27;</span>,<span class="hljs-string">&#x27;o&#x27;</span>&#125;;
+       String str3 = <span class="hljs-keyword">new</span> String(charArray);
 
-       System.out.println(str1.equals(str2));  &#x2F;&#x2F;true
-       System.out.println(str2.equals(str3));  &#x2F;&#x2F;true
-       System.out.println(str3.equals(&quot;Hello&quot;));  &#x2F;&#x2F;true       equals严格区分大小写
-       System.out.println(&quot;Hello&quot;.equals(str1));   &#x2F;&#x2F;true
+       System.out.println(str1.equals(str2));  <span class="hljs-comment">//true</span>
+       System.out.println(str2.equals(str3));  <span class="hljs-comment">//true</span>
+       System.out.println(str3.equals(<span class="hljs-string">&quot;Hello&quot;</span>));  <span class="hljs-comment">//true       equals严格区分大小写</span>
+       System.out.println(<span class="hljs-string">&quot;Hello&quot;</span>.equals(str1));   <span class="hljs-comment">//true</span>
 
 
-       String str4 &#x3D; &quot;hello&quot;;
+       String str4 = <span class="hljs-string">&quot;hello&quot;</span>;
        System.out.println(str1.equals(str4));
-       System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+       System.out.println(<span class="hljs-string">&quot;============================&quot;</span>);
 
-       String str5 &#x3D; null;
-       System.out.println(&quot;abc&quot;.equals(str5)); &#x2F;&#x2F;推荐: false
-       &#x2F;&#x2F;     System.out.println(str5.equals(&quot;abc&quot;)); &#x2F;&#x2F;不推荐: 报错，空指针异常NullPrinterException
+       String str5 = <span class="hljs-keyword">null</span>;
+       System.out.println(<span class="hljs-string">&quot;abc&quot;</span>.equals(str5)); <span class="hljs-comment">//推荐: false</span>
+       <span class="hljs-comment">//     System.out.println(str5.equals(&quot;abc&quot;)); //不推荐: 报错，空指针异常NullPrinterException</span>
 
-       String strA &#x3D; &quot;Java&quot;;
-       String strB &#x3D; &quot;java&quot;;
-       System.out.println(strA.equals(strB));  &#x2F;&#x2F; false: 严格区分大小写
-       System.out.println(strA.equalsIgnoreCase(str5));  &#x2F;&#x2F;true：忽略大小写，但是只对字母不区分，对中文会false
+       String strA = <span class="hljs-string">&quot;Java&quot;</span>;
+       String strB = <span class="hljs-string">&quot;java&quot;</span>;
+       System.out.println(strA.equals(strB));  <span class="hljs-comment">// false: 严格区分大小写</span>
+       System.out.println(strA.equalsIgnoreCase(str5));  <span class="hljs-comment">//true：忽略大小写，但是只对字母不区分，对中文会false</span>
 
 
    &#125;

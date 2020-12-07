@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1k 字
+      981 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      13
+      12
        分钟
     </span>
   
@@ -237,54 +237,54 @@
 <p>2.静态方法当中不能用this<br>    原因：this代表当前对象，通过谁调用的方法，谁就是当前对象。</p>
 <hr>
 <p>   下面为代码区：</p>
-<h6 id="静态变量Student："><a href="#静态变量Student：" class="headerlink" title="静态变量Student："></a>静态变量Student：</h6><pre><code class="hljs javascpit">
-public class Student &#123;
-    private int id;     &#x2F;&#x2F;学号
-    private String name;
-    private int age;
-    static String room;
-    private static int idCounter &#x3D; 0;   &#x2F;&#x2F;计数器
+<h6 id="静态变量Student："><a href="#静态变量Student：" class="headerlink" title="静态变量Student："></a>静态变量Student：</h6><pre><code class="hljs java">
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> </span>&#123;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> id;     <span class="hljs-comment">//学号</span>
+    <span class="hljs-keyword">private</span> String name;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> age;
+    <span class="hljs-keyword">static</span> String room;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> idCounter = <span class="hljs-number">0</span>;   <span class="hljs-comment">//计数器</span>
 
 
-    public Student() &#123;
-        this.id &#x3D; ++idCounter;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Student</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-keyword">this</span>.id = ++idCounter;
     &#125;
-    public Student(String name, int age) &#123;
-        this.name &#x3D; name;
-        this.age &#x3D; age;
-        this.id &#x3D; ++idCounter;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Student</span><span class="hljs-params">(String name, <span class="hljs-keyword">int</span> age)</span> </span>&#123;
+        <span class="hljs-keyword">this</span>.name = name;
+        <span class="hljs-keyword">this</span>.age = age;
+        <span class="hljs-keyword">this</span>.id = ++idCounter;
 
     &#125;
-    public int getId() &#123;
-        return id;
-    &#125;
-
-    public void setId(int id) &#123;
-        this.id &#x3D; id;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getId</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-keyword">return</span> id;
     &#125;
 
-    public int getAge() &#123;
-        return age;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setId</span><span class="hljs-params">(<span class="hljs-keyword">int</span> id)</span> </span>&#123;
+        <span class="hljs-keyword">this</span>.id = id;
     &#125;
 
-    public void setAge(int age) &#123;
-        this.age &#x3D; age;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getAge</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-keyword">return</span> age;
     &#125;
 
-    public String getName() &#123;
-        return name;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setAge</span><span class="hljs-params">(<span class="hljs-keyword">int</span> age)</span> </span>&#123;
+        <span class="hljs-keyword">this</span>.age = age;
     &#125;
 
-    public void setName(String name) &#123;
-        this.name &#x3D; name;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-keyword">return</span> name;
     &#125;
 
-    public static String getRoom() &#123;
-        return room;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(String name)</span> </span>&#123;
+        <span class="hljs-keyword">this</span>.name = name;
     &#125;
 
-    public static void setRoom(String room) &#123;
-        Student.room &#x3D; room;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">getRoom</span><span class="hljs-params">()</span> </span>&#123;
+        <span class="hljs-keyword">return</span> room;
+    &#125;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRoom</span><span class="hljs-params">(String room)</span> </span>&#123;
+        Student.room = room;
     &#125;
 &#125;
 </code></pre>
@@ -292,62 +292,62 @@ public class Student &#123;
 
 
 <h6 id="静态变量Static："><a href="#静态变量Static：" class="headerlink" title="静态变量Static："></a>静态变量Static：</h6><p>使用</p>
-<pre><code class="hljs javascpit">public class Static &#123;
-    public static void main(String[] args) &#123;
-        Student one &#x3D; new Student(&quot;卢本伟&quot;, 22);
-        &#x2F;&#x2F;只需要进行一次操作就好了
-        one.room &#x3D; &quot;101教室&quot;;
+<pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Static</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        Student one = <span class="hljs-keyword">new</span> Student(<span class="hljs-string">&quot;卢本伟&quot;</span>, <span class="hljs-number">22</span>);
+        <span class="hljs-comment">//只需要进行一次操作就好了</span>
+        one.room = <span class="hljs-string">&quot;101教室&quot;</span>;
 
-        System.out.println(&quot;姓名：&quot;+one.getName()+&quot;，年龄：&quot;+one.getAge()+&quot;，教室：&quot;+one.room+&quot;，学号：&quot;+ one.getId());
+        System.out.println(<span class="hljs-string">&quot;姓名：&quot;</span>+one.getName()+<span class="hljs-string">&quot;，年龄：&quot;</span>+one.getAge()+<span class="hljs-string">&quot;，教室：&quot;</span>+one.room+<span class="hljs-string">&quot;，学号：&quot;</span>+ one.getId());
 
-        Student two &#x3D; new Student(&quot;骚猪&quot;, 23);
+        Student two = <span class="hljs-keyword">new</span> Student(<span class="hljs-string">&quot;骚猪&quot;</span>, <span class="hljs-number">23</span>);
 
-        System.out.println(&quot;姓名：&quot;+two.getName()+&quot;，年龄：&quot;+two.getAge()+&quot;，教室：&quot;+one.room+&quot;，学号：&quot;+ two.getId());
+        System.out.println(<span class="hljs-string">&quot;姓名：&quot;</span>+two.getName()+<span class="hljs-string">&quot;，年龄：&quot;</span>+two.getAge()+<span class="hljs-string">&quot;，教室：&quot;</span>+one.room+<span class="hljs-string">&quot;，学号：&quot;</span>+ two.getId());
 
     &#125;
 &#125;
 </code></pre>
 
-<h6 id="静态方法Static-1："><a href="#静态方法Static-1：" class="headerlink" title="静态方法Static_1："></a>静态方法Static_1：</h6><pre><code class="hljs javascpit">public class Static_1 &#123;
-    int num;&#x2F;&#x2F;成员变量
-    static int numStatic;&#x2F;&#x2F;静态变量
-    public void method()&#123;
-        System.out.println(&quot;这是一个成员方法&quot;);
+<h6 id="静态方法Static-1："><a href="#静态方法Static-1：" class="headerlink" title="静态方法Static_1："></a>静态方法Static_1：</h6><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Static_1</span> </span>&#123;
+    <span class="hljs-keyword">int</span> num;<span class="hljs-comment">//成员变量</span>
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> numStatic;<span class="hljs-comment">//静态变量</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">method</span><span class="hljs-params">()</span></span>&#123;
+        System.out.println(<span class="hljs-string">&quot;这是一个成员方法&quot;</span>);
 
 
-        &#x2F;&#x2F;成员方法可以直接访问成员变量
+        <span class="hljs-comment">//成员方法可以直接访问成员变量</span>
         System.out.println(num);
-        &#x2F;&#x2F;成员方法可以直接访问静态变量
+        <span class="hljs-comment">//成员方法可以直接访问静态变量</span>
         System.out.println(numStatic);
-        System.out.println(&quot;这是this自己：&quot;+this);
+        System.out.println(<span class="hljs-string">&quot;这是this自己：&quot;</span>+<span class="hljs-keyword">this</span>);
     &#125;
-    public static void methodStatic()&#123;
-        System.out.println(&quot;这是一个静态方法&quot;);
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">methodStatic</span><span class="hljs-params">()</span></span>&#123;
+        System.out.println(<span class="hljs-string">&quot;这是一个静态方法&quot;</span>);
 
-        &#x2F;&#x2F;静态方法不能直接访非静态【重点】
-    &#x2F;&#x2F;    System.out.println(num);      &#x2F;&#x2F;错误写法
-        &#x2F;&#x2F;静态方法可以访问静态变量
+        <span class="hljs-comment">//静态方法不能直接访非静态【重点】</span>
+    <span class="hljs-comment">//    System.out.println(num);      //错误写法</span>
+        <span class="hljs-comment">//静态方法可以访问静态变量</span>
         System.out.println(numStatic);
-    &#x2F;&#x2F;    System.out.println(this); &#x2F;&#x2F;错误写法  &#x2F;&#x2F;this代表当前对象
-    &#x2F;&#x2F;      static方法会被强制翻译成 类名称.静态方法名       this表示对象，而静态方法不需要对象，两者冲突
+    <span class="hljs-comment">//    System.out.println(this); //错误写法  //this代表当前对象</span>
+    <span class="hljs-comment">//      static方法会被强制翻译成 类名称.静态方法名       this表示对象，而静态方法不需要对象，两者冲突</span>
     &#125;
 
 &#125;</code></pre>
-<h6 id="静态方法useStatic-1："><a href="#静态方法useStatic-1：" class="headerlink" title="静态方法useStatic_1："></a>静态方法useStatic_1：</h6><pre><code class="hljs javascpit">public static void main(String[] args) &#123;
-       Static_1 st1 &#x3D; new Static_1();&#x2F;&#x2F;首先创建对象
-       &#x2F;&#x2F;然后才能使用没有static关键字的内容
+<h6 id="静态方法useStatic-1："><a href="#静态方法useStatic-1：" class="headerlink" title="静态方法useStatic_1："></a>静态方法useStatic_1：</h6><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+       Static_1 st1 = <span class="hljs-keyword">new</span> Static_1();<span class="hljs-comment">//首先创建对象</span>
+       <span class="hljs-comment">//然后才能使用没有static关键字的内容</span>
        st1.method();
 
-       &#x2F;&#x2F;对于静态方法来说，可以通过对象名进行调用，也可以直接通过类名称来调用
-       st1.methodStatic();     &#x2F;&#x2F;正确，不推荐，这种写法在编译之后也会被javac翻译成为“类名称.静态方法名”
-       Static_1.methodStatic();&#x2F;&#x2F;正确，推荐
+       <span class="hljs-comment">//对于静态方法来说，可以通过对象名进行调用，也可以直接通过类名称来调用</span>
+       st1.methodStatic();     <span class="hljs-comment">//正确，不推荐，这种写法在编译之后也会被javac翻译成为“类名称.静态方法名”</span>
+       Static_1.methodStatic();<span class="hljs-comment">//正确，推荐</span>
 
-       &#x2F;&#x2F;对于本类当中的静态方法，可以省略类名称
+       <span class="hljs-comment">//对于本类当中的静态方法，可以省略类名称</span>
        myMethod();
-       useStatic_1.myMethod();&#x2F;&#x2F;完全等效
+       useStatic_1.myMethod();<span class="hljs-comment">//完全等效</span>
    &#125;
-   public static void myMethod()&#123;
-       System.out.println(&quot;这是自己的方法&quot;);
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">myMethod</span><span class="hljs-params">()</span></span>&#123;
+       System.out.println(<span class="hljs-string">&quot;这是自己的方法&quot;</span>);
    &#125;</code></pre>
 <hr>
 <p><del>我正在黑暗中摸索前行，每一盏我点亮的路灯下都有我沾满泥垢的掌印，但光亮终会散满我所幻想的世界。</del></p>

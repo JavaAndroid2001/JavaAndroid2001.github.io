@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      811 字
+      789 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      9
+      8
        分钟
     </span>
   
@@ -233,14 +233,14 @@
 <li>关于继承变量范围的使用<br></br>&emsp;&emsp;<br>局部变量：           直接写成员变量名<br></br>&emsp;&emsp;<br>本类的成员变量：      this.成员变量名<br></br>&emsp;&emsp;<br>父类的成员变量：      super.成员变量名</li>
 </ul>
 <ul>
-<li>代码示例部分<pre><code class="hljs javascpit">
-    int num &#x3D; 10;
+<li>代码示例部分<pre><code class="hljs java">
+    <span class="hljs-keyword">int</span> num = <span class="hljs-number">10</span>;
 
-    public void method()&#123;
-        int num &#x3D; 30;
-        System.out.println(num);    &#x2F;&#x2F;30        &#x2F;&#x2F;局部变量
-        System.out.println(this.num);   &#x2F;&#x2F;10          &#x2F;&#x2F;本类的成员变量
-        System.out.println(super.num);  &#x2F;&#x2F;20        &#x2F;&#x2F;父类的成员变量
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">method</span><span class="hljs-params">()</span></span>&#123;
+        <span class="hljs-keyword">int</span> num = <span class="hljs-number">30</span>;
+        System.out.println(num);    <span class="hljs-comment">//30        //局部变量</span>
+        System.out.println(<span class="hljs-keyword">this</span>.num);   <span class="hljs-comment">//10          //本类的成员变量</span>
+        System.out.println(<span class="hljs-keyword">super</span>.num);  <span class="hljs-comment">//20        //父类的成员变量</span>
     &#125;
 &#125;</code></pre>
 
@@ -280,10 +280,10 @@
 </ul>
 <p>扩展：  </br><br>void<br></br><br>学过Java的人都知道void的意思是空<br></br><br>如果你去问老手，老手会告诉你说：“void什么都不是，你只要记住void就是空，在方法申明的时候表示该方法没有返回值”。<br></br></p>
 <ul>
-<li>扩展代码示例部分<pre><code class="hljs javascpit">public Object method()&#123;
+<li>扩展代码示例部分<pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">method</span><span class="hljs-params">()</span></span>&#123;
 
-      return null;
-      &#x2F;&#x2F;用了可实例化的类就必须要拥有返回值，不然报错
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+      <span class="hljs-comment">//用了可实例化的类就必须要拥有返回值，不然报错</span>
   &#125;</code></pre>
 
 
@@ -304,13 +304,13 @@
 <ul>
 <li>子类代码示例部分</li>
 </ul>
-<pre><code class="hljs javascpit">
-public class Zi extends Fu &#123;
-    @Override       &#x2F;&#x2F; 写在方法前面，用来检测是不是有效的正确覆盖重写。
-    public Object method()&#123;
-        &#x2F;&#x2F;若这里使用void则不符合继承规则子类高于父类
-        &#x2F;&#x2F;不能高于父类的返回值类型，但是可以等于
-        return null;
+<pre><code class="hljs java">
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Zi</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Fu</span> </span>&#123;
+    <span class="hljs-meta">@Override</span>       <span class="hljs-comment">// 写在方法前面，用来检测是不是有效的正确覆盖重写。</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">method</span><span class="hljs-params">()</span></span>&#123;
+        <span class="hljs-comment">//若这里使用void则不符合继承规则子类高于父类</span>
+        <span class="hljs-comment">//不能高于父类的返回值类型，但是可以等于</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
     &#125;
 &#125;
 </code></pre>

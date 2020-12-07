@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      664 字
+      576 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      9
+      7
        分钟
     </span>
   
@@ -260,28 +260,28 @@ public class 子类名称 extends 父类名称 {
 
 <hr>
 <h5 id="代码区："><a href="#代码区：" class="headerlink" title="代码区："></a>代码区：</h5><h6 id="主程序："><a href="#主程序：" class="headerlink" title="主程序："></a>主程序：</h6><p>这段主要是父类子类的使用，还有重名变量，重名方法。还有的明天再更吧</p>
-<pre><code class="hljs javascipt">public static void main(String[] args) &#123;
-       Fu fu &#x3D; new Fu();   &#x2F;&#x2F;创建父类对象
+<pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+       Fu fu = <span class="hljs-keyword">new</span> Fu();   <span class="hljs-comment">//创建父类对象</span>
        System.out.println(fu.FuNum);
-       &#x2F;&#x2F;等号左边是谁，就优先用谁
-       System.out.println(fu.num); &#x2F;&#x2F;重名
-       System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+       <span class="hljs-comment">//等号左边是谁，就优先用谁</span>
+       System.out.println(fu.num); <span class="hljs-comment">//重名</span>
+       System.out.println(<span class="hljs-string">&quot;==========================&quot;</span>);
 
-       Zi zi &#x3D; new Zi();   &#x2F;&#x2F;创建子类对象
-       &#x2F;&#x2F;这里继承了父类的FuNum
-       System.out.println(zi.FuNum);   &#x2F;&#x2F;使用父类的FuNum
+       Zi zi = <span class="hljs-keyword">new</span> Zi();   <span class="hljs-comment">//创建子类对象</span>
+       <span class="hljs-comment">//这里继承了父类的FuNum</span>
+       System.out.println(zi.FuNum);   <span class="hljs-comment">//使用父类的FuNum</span>
        System.out.println(zi.num);
        System.out.println(zi.ZiNum);
-       System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+       System.out.println(<span class="hljs-string">&quot;==========================&quot;</span>);
 
-       &#x2F;&#x2F;等号左边是谁，就优先用谁
-       System.out.println(zi.num); &#x2F;&#x2F;重名
+       <span class="hljs-comment">//等号左边是谁，就优先用谁</span>
+       System.out.println(zi.num); <span class="hljs-comment">//重名</span>
 
 
-       &#x2F;&#x2F;这个方法是子类的，优先用子类的，没有再向上找
-       zi.methodZi();  &#x2F;&#x2F; 这是子类的方法30
-       &#x2F;&#x2F;这个方法是父类定义的
-       zi.methodFu();  &#x2F;&#x2F; 这是父类的方法10
+       <span class="hljs-comment">//这个方法是子类的，优先用子类的，没有再向上找</span>
+       zi.methodZi();  <span class="hljs-comment">// 这是子类的方法30</span>
+       <span class="hljs-comment">//这个方法是父类定义的</span>
+       zi.methodFu();  <span class="hljs-comment">// 这是父类的方法10</span>
 
 
 
@@ -291,14 +291,14 @@ public class 子类名称 extends 父类名称 {
 
 
 </code></pre>
-<h6 id="父类："><a href="#父类：" class="headerlink" title="父类："></a>父类：</h6><pre><code class="hljs javascipt">
-public class Fu &#123;
+<h6 id="父类："><a href="#父类：" class="headerlink" title="父类："></a>父类：</h6><pre><code class="hljs java">
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Fu</span> </span>&#123;
 
-    int num &#x3D; 10;
-    int FuNum &#x3D; 20;
-    public void methodFu()&#123;
-        &#x2F;&#x2F;使用的是父类当中的，不会向下找子类的
-        System.out.println(&quot;这是父类的方法&quot;+num);
+    <span class="hljs-keyword">int</span> num = <span class="hljs-number">10</span>;
+    <span class="hljs-keyword">int</span> FuNum = <span class="hljs-number">20</span>;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">methodFu</span><span class="hljs-params">()</span></span>&#123;
+        <span class="hljs-comment">//使用的是父类当中的，不会向下找子类的</span>
+        System.out.println(<span class="hljs-string">&quot;这是父类的方法&quot;</span>+num);
     &#125;
 
 
@@ -306,14 +306,14 @@ public class Fu &#123;
 
 &#125;
 </code></pre>
-<h6 id="子类："><a href="#子类：" class="headerlink" title="子类："></a>子类：</h6><pre><code class="hljs javascipt">
-public class Zi extends Fu &#123;
-            &#x2F;&#x2F;继承父类
-    int num &#x3D; 30;
-    int ZiNum &#x3D; 50;
-    public void methodZi()&#123;
-        &#x2F;&#x2F;使用的是本类当中的num
-        System.out.println(&quot;这是子类的方法&quot;+num);
+<h6 id="子类："><a href="#子类：" class="headerlink" title="子类："></a>子类：</h6><pre><code class="hljs java">
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Zi</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Fu</span> </span>&#123;
+            <span class="hljs-comment">//继承父类</span>
+    <span class="hljs-keyword">int</span> num = <span class="hljs-number">30</span>;
+    <span class="hljs-keyword">int</span> ZiNum = <span class="hljs-number">50</span>;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">methodZi</span><span class="hljs-params">()</span></span>&#123;
+        <span class="hljs-comment">//使用的是本类当中的num</span>
+        System.out.println(<span class="hljs-string">&quot;这是子类的方法&quot;</span>+num);
     &#125;
 
 

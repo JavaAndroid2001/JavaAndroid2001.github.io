@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      604 字
+      581 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8
+      7
        分钟
     </span>
   
@@ -238,12 +238,12 @@
     3.super的父类构造调用，必须是子类构造方法的第一语句。不能一个子类构造调用多次super构造。
 
 <p></br></br><br>总结：<br></br>&emsp;&emsp;<br>    子类必须调用父类构造方法，不写则赠送super();写了则用写的指定的super调用，super只能有一个，还必须是第一个。</p>
-<h6 id="代码演示区："><a href="#代码演示区：" class="headerlink" title="代码演示区："></a>代码演示区：</h6> <pre><code class="hljs javascpit"> 
+<h6 id="代码演示区："><a href="#代码演示区：" class="headerlink" title="代码演示区："></a>代码演示区：</h6> <pre><code class="hljs java"> 
  
  class0 Use:
- 		public class Demo3 &#123;
-    public static void main(String[] args) &#123;
-        Zi fu &#x3D; new Zi();
+ 		<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Demo3</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+        Zi fu = <span class="hljs-keyword">new</span> Zi();
     &#125;
 &#125;
 
@@ -255,13 +255,13 @@
  
  
  class1	Fu:
- 		public class Fu &#123;
-    &#x2F;&#x2F;下面两个方法为重载
-    public Fu()&#123;
-        System.out.println(&quot;父类无参构造！&quot;);
+ 		<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Fu</span> </span>&#123;
+    <span class="hljs-comment">//下面两个方法为重载</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Fu</span><span class="hljs-params">()</span></span>&#123;
+        System.out.println(<span class="hljs-string">&quot;父类无参构造！&quot;</span>);
     &#125;
-    public Fu(int num)&#123;
-        System.out.println(&quot;父类有参构造！&quot;);
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Fu</span><span class="hljs-params">(<span class="hljs-keyword">int</span> num)</span></span>&#123;
+        System.out.println(<span class="hljs-string">&quot;父类有参构造！&quot;</span>);
     &#125;
 &#125;
 
@@ -271,16 +271,16 @@
 
 
 calss2 Zi:
-		public class Zi extends Fu&#123;
-    public Zi()&#123;
-        super();
-        &#x2F;&#x2F;super();    &#x2F;&#x2F;在调用父类无参构造方法，不写照样有
-        &#x2F;&#x2F;super(10);&#x2F;&#x2F;在调用父类重载的构造方法        &#x2F;&#x2F;调用有参构造
-        System.out.println(&quot;子类方法构造！&quot;);
+		<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Zi</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Fu</span></span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Zi</span><span class="hljs-params">()</span></span>&#123;
+        <span class="hljs-keyword">super</span>();
+        <span class="hljs-comment">//super();    //在调用父类无参构造方法，不写照样有</span>
+        <span class="hljs-comment">//super(10);//在调用父类重载的构造方法        //调用有参构造</span>
+        System.out.println(<span class="hljs-string">&quot;子类方法构造！&quot;</span>);
 
     &#125;
-    public void method()&#123;
-    &#x2F;&#x2F;    super();    &#x2F;&#x2F;错误写法！只有子类构造方法，才能调用父类构造方法
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">method</span><span class="hljs-params">()</span></span>&#123;
+    <span class="hljs-comment">//    super();    //错误写法！只有子类构造方法，才能调用父类构造方法</span>
     &#125;
 &#125;</code></pre>
 
@@ -297,9 +297,9 @@ calss2 Zi:
 3.在子类的构造方法中，访问父类的构造方法。
 
 
-<pre><code class="hljs javascpit">class0 Use:
-		public class Use &#123;
-    public static void main(String[] args) &#123;
+<pre><code class="hljs java">class0 Use:
+		<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Use</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
 
     &#125;
 &#125;
@@ -308,10 +308,10 @@ calss2 Zi:
 ***
 
 class1 Fu:
-		public class Fu &#123;
-    int num &#x3D; 20;
-    public void method()&#123;
-        System.out.println(&quot;父类方法&quot;);
+		<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Fu</span> </span>&#123;
+    <span class="hljs-keyword">int</span> num = <span class="hljs-number">20</span>;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">method</span><span class="hljs-params">()</span></span>&#123;
+        System.out.println(<span class="hljs-string">&quot;父类方法&quot;</span>);
     &#125;
 &#125;
 
@@ -319,17 +319,17 @@ class1 Fu:
 ***
 
 class2 Zi:
-		public class Zi extends Fu &#123;
-    int num &#x3D; 10;
-    public Zi()&#123;
-        super();
+		<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Zi</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Fu</span> </span>&#123;
+    <span class="hljs-keyword">int</span> num = <span class="hljs-number">10</span>;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Zi</span><span class="hljs-params">()</span></span>&#123;
+        <span class="hljs-keyword">super</span>();
     &#125;
-    public void methodZi()&#123;
-        System.out.println(super.num);  &#x2F;&#x2F;调用父类当中的20
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">methodZi</span><span class="hljs-params">()</span></span>&#123;
+        System.out.println(<span class="hljs-keyword">super</span>.num);  <span class="hljs-comment">//调用父类当中的20</span>
     &#125;
-    public void method()&#123;
-        super.method(); &#x2F;&#x2F;访问父类method方法
-        System.out.println(&quot;子类方法&quot;);
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">method</span><span class="hljs-params">()</span></span>&#123;
+        <span class="hljs-keyword">super</span>.method(); <span class="hljs-comment">//访问父类method方法</span>
+        System.out.println(<span class="hljs-string">&quot;子类方法&quot;</span>);
     &#125;
 &#125;
 

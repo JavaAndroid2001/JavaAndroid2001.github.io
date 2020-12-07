@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      938 字
+      879 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11
+      10
        分钟
     </span>
   
@@ -245,13 +245,13 @@
 <p></br></br></br></br></br></br><br>抽象类的注意事项：<br></br><br>1.抽象类不能创建对象，如果创建了，编译无法通过而报错。只能创建非抽象类的对象。<br></br>&emsp;&emsp;&emsp;&emsp;<br>    理解：假设创建了抽象类的对象，调用抽象的方法，而抽象方法没具体的方法体，没有意义<br>    </br><br>2.抽象类中，可以有构造方法，是供子类创建对象时，初始化父类成员使用的。<br></br>&emsp;&emsp;&emsp;&emsp;<br>    理解：子类的构造方法中，有默认的super(),需要访问父类构造方法。<br>    </br><br>3.抽象类中，不一定包含抽象方法，但是又抽象方法的类必定是抽象类。<br></br>&emsp;&emsp;&emsp;&emsp;<br>    理解：未包含抽象方法的抽象类，目的就是不想让调用者创建该类对象，通常用于某些特殊的类结构设计。<br>    </br><br>4.抽象类的子类，必须重写抽象父类中所有的抽象方法，否则，编译无法通过而报错。除非该子类也是抽象类。<br></br>&emsp;&emsp;&emsp;&emsp;<br>    理解：假设不重写所有抽象方法，则类中可能包含抽象方法。那么创建对象后，调用抽象的方法，没意义。<br></br></br></br></br></p>
 <p>爷爷类 —&gt; 父类Dog —&gt; 子类金毛Dog —&gt; 子类2哈Dog</p>
 <hr>
-<h5 id="代码区："><a href="#代码区：" class="headerlink" title="代码区："></a>代码区：</h5><pre><code class="hljs javascpit">class1	Fu:			
-		&#x2F;&#x2F;Max抽象父类
-&#x2F;&#x2F;爷爷类
-&#x2F;&#x2F;有两个抽象方法
-public abstract class Fu &#123;
-        public abstract void eat();     &#x2F;&#x2F;吃
-        public abstract void sleep();   &#x2F;&#x2F;睡
+<h5 id="代码区："><a href="#代码区：" class="headerlink" title="代码区："></a>代码区：</h5><pre><code class="hljs java">class1	Fu:			
+		<span class="hljs-comment">//Max抽象父类</span>
+<span class="hljs-comment">//爷爷类</span>
+<span class="hljs-comment">//有两个抽象方法</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Fu</span> </span>&#123;
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">eat</span><span class="hljs-params">()</span></span>;     <span class="hljs-comment">//吃</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sleep</span><span class="hljs-params">()</span></span>;   <span class="hljs-comment">//睡</span>
 &#125;
 
 
@@ -261,13 +261,13 @@ public abstract class Fu &#123;
 
 
 class2 Dog:
-		&#x2F;&#x2F;子类也是一个抽象类
-&#x2F;&#x2F;父亲类
-&#x2F;&#x2F;只对一个抽象方法进行了处理
-public abstract class Dog extends Fu&#123;
-    @Override
-    public void eat() &#123;
-        System.out.println(&quot;狗吃骨头&quot;);
+		<span class="hljs-comment">//子类也是一个抽象类</span>
+<span class="hljs-comment">//父亲类</span>
+<span class="hljs-comment">//只对一个抽象方法进行了处理</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Fu</span></span>&#123;
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">eat</span><span class="hljs-params">()</span> </span>&#123;
+        System.out.println(<span class="hljs-string">&quot;狗吃骨头&quot;</span>);
     &#125;
 
 &#125;
@@ -279,12 +279,12 @@ public abstract class Dog extends Fu&#123;
 
 
 class3 Ha2Dog:
-			&#x2F;&#x2F;孙子类
-		public class Ha2Dog extends Dog&#123;
+			<span class="hljs-comment">//孙子类</span>
+		<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ha2Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Dog</span></span>&#123;
 
-    @Override
-    public void sleep() &#123;
-        System.out.println(&quot;二哈睡觉嘿嘿嘿.......&quot;);
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sleep</span><span class="hljs-params">()</span> </span>&#123;
+        System.out.println(<span class="hljs-string">&quot;二哈睡觉嘿嘿嘿.......&quot;</span>);
     &#125;
 &#125;
 
@@ -294,12 +294,12 @@ class3 Ha2Dog:
 
 
 class4 GoldenDog:
-			&#x2F;&#x2F;孙子类2
-		public class GoldenDog extends Dog&#123;
+			<span class="hljs-comment">//孙子类2</span>
+		<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GoldenDog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Dog</span></span>&#123;
 
-    @Override
-    public void sleep() &#123;
-        System.out.println(&quot;金毛睡觉呼呼呼.......&quot;);
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sleep</span><span class="hljs-params">()</span> </span>&#123;
+        System.out.println(<span class="hljs-string">&quot;金毛睡觉呼呼呼.......&quot;</span>);
     &#125;
 &#125;
 
@@ -309,17 +309,17 @@ class4 GoldenDog:
 
 
 class5 DemoMain:
-			&#x2F;&#x2F;主方法
-      public class DemoMain &#123;
-    public static void main(String[] args) &#123;
-&#x2F;&#x2F;        Fu fu &#x3D; new Fu();  &#x2F;&#x2F;错误写法                 爷爷类
-&#x2F;&#x2F;        Dog dog &#x3D; new Dog();  &#x2F;&#x2F;也是错误写法            父亲类
-        &#x2F;&#x2F;但凡用abstract修饰的，不能直接new
-        Ha2Dog ha2Dog &#x3D; new Ha2Dog();
+			<span class="hljs-comment">//主方法</span>
+      <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DemoMain</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
+<span class="hljs-comment">//        Fu fu = new Fu();  //错误写法                 爷爷类</span>
+<span class="hljs-comment">//        Dog dog = new Dog();  //也是错误写法            父亲类</span>
+        <span class="hljs-comment">//但凡用abstract修饰的，不能直接new</span>
+        Ha2Dog ha2Dog = <span class="hljs-keyword">new</span> Ha2Dog();
         ha2Dog.eat();
         ha2Dog.sleep();
-        System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
-        GoldenDog goldenDog &#x3D; new GoldenDog();
+        System.out.println(<span class="hljs-string">&quot;=======================&quot;</span>);
+        GoldenDog goldenDog = <span class="hljs-keyword">new</span> GoldenDog();
         goldenDog.eat();
         goldenDog.sleep();
     &#125;

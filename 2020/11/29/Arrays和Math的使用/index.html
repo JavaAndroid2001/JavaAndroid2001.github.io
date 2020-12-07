@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      870 字
+      705 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      13
+      10
        分钟
     </span>
   
@@ -235,23 +235,23 @@ java.util.Arrays是一个与数组相关的工具类，里面提供了大量静�
 </br></br>
 
 <p>public static String toString(数组)：将参数数组变成一个字符串(按照默认格式：[元素1],[元素2],[元素3].。。。。)<br></br></br><br>public static void sort(数组)：按照默认升序(从小到大)对数组的元素进行排序。<br></br>&emsp;&emsp;<br>   备注：<br>   </br>&emsp;&emsp;<br>    1.如果是数值，sort默认按照升序从小到大<br>    </br>&emsp;&emsp;<br>    2.如果是字符串，sort默认按照字母升序<br>    </br>&emsp;&emsp;<br>    3.如果是自定义的类型，那么这个自定义的类需要有Comparable或者Comparable接口的支持。</p>
-<h5 id="代码区："><a href="#代码区：" class="headerlink" title="代码区："></a>代码区：</h5><pre><code class="hljs javascipt">int[] intArray &#x3D; &#123;10,20,30&#125;;
-    &#x2F;&#x2F;将int[]数组按照默认格式变成字符串
-    String intStr &#x3D; Arrays.toString(intArray);
-    System.out.println(intStr);     &#x2F;&#x2F;[10, 20, 30]
+<h5 id="代码区："><a href="#代码区：" class="headerlink" title="代码区："></a>代码区：</h5><pre><code class="hljs java"><span class="hljs-keyword">int</span>[] intArray = &#123;<span class="hljs-number">10</span>,<span class="hljs-number">20</span>,<span class="hljs-number">30</span>&#125;;
+    <span class="hljs-comment">//将int[]数组按照默认格式变成字符串</span>
+    String intStr = Arrays.toString(intArray);
+    System.out.println(intStr);     <span class="hljs-comment">//[10, 20, 30]</span>
 
-    int[] array1 &#x3D; &#123;2,1,5,4,9,8,3,5&#125;;
+    <span class="hljs-keyword">int</span>[] array1 = &#123;<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">9</span>,<span class="hljs-number">8</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>&#125;;
     Arrays.sort(array1);
-    System.out.println(Arrays.toString(array1));        &#x2F;&#x2F;[1, 2, 3, 4, 5, 5, 8, 9]
-    &#x2F;&#x2F;倒叙遍历数组array1
-    for (int i &#x3D; array1.length - 1; i &gt;&#x3D; 0; i--) &#123;
+    System.out.println(Arrays.toString(array1));        <span class="hljs-comment">//[1, 2, 3, 4, 5, 5, 8, 9]</span>
+    <span class="hljs-comment">//倒叙遍历数组array1</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = array1.length - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) &#123;
         System.out.println(array1[i]);
     &#125;
-    System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+    System.out.println(<span class="hljs-string">&quot;==============================================&quot;</span>);
 
-    String[] array2 &#x3D; &#123;&quot;bbb&quot;,&quot;ccc&quot;,&quot;aaa&quot;&#125;;
+    String[] array2 = &#123;<span class="hljs-string">&quot;bbb&quot;</span>,<span class="hljs-string">&quot;ccc&quot;</span>,<span class="hljs-string">&quot;aaa&quot;</span>&#125;;
     Arrays.sort(array2);
-    System.out.println(Arrays.toString(array2));        &#x2F;&#x2F;[aaa, bbb, ccc]
+    System.out.println(Arrays.toString(array2));        <span class="hljs-comment">//[aaa, bbb, ccc]</span>
 </code></pre>
 
 
@@ -261,40 +261,40 @@ java.util.Arrays是一个与数组相关的工具类，里面提供了大量静�
 <p>java.util.Math类是数学相关的工具类，里面提供了大量的静态方法，完成与数学运算相关的操作。<br></br></p>
 <p>public static double abs(double num)：获取绝对值。有多种重载。<br></br><br>public static double ceil(double num)：向下取整。<br></br><br>public static double floor(double num)：向下取整。<br></br><br>public static long round(double num)：四舍五入。</p>
 <p></br></br><br>Math.PI 代表近似的圆周率常量(double)。</p>
-<h5 id="代码区：-1"><a href="#代码区：-1" class="headerlink" title="代码区："></a>代码区：</h5><pre><code class="hljs javascipt">&#x2F;&#x2F;获取绝对值
-    System.out.println(Math.abs(3.14));  &#x2F;&#x2F; 3.14
-    System.out.println(Math.abs(0));     &#x2F;&#x2F; 0
-    System.out.println(Math.abs(-2.5));  &#x2F;&#x2F; 2.5
-    System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
+<h5 id="代码区：-1"><a href="#代码区：-1" class="headerlink" title="代码区："></a>代码区：</h5><pre><code class="hljs java"><span class="hljs-comment">//获取绝对值</span>
+    System.out.println(Math.abs(<span class="hljs-number">3.14</span>));  <span class="hljs-comment">// 3.14</span>
+    System.out.println(Math.abs(<span class="hljs-number">0</span>));     <span class="hljs-comment">// 0</span>
+    System.out.println(Math.abs(-<span class="hljs-number">2.5</span>));  <span class="hljs-comment">// 2.5</span>
+    System.out.println(<span class="hljs-string">&quot;================================&quot;</span>);
 
 
-    &#x2F;&#x2F;向下取整
-    System.out.println(Math.ceil(3.9));  &#x2F;&#x2F; 3.0
-    System.out.println(Math.ceil(3.1));  &#x2F;&#x2F; 3.0
-    System.out.println(Math.ceil(3.0));  &#x2F;&#x2F; 3.0
+    <span class="hljs-comment">//向下取整</span>
+    System.out.println(Math.ceil(<span class="hljs-number">3.9</span>));  <span class="hljs-comment">// 3.0</span>
+    System.out.println(Math.ceil(<span class="hljs-number">3.1</span>));  <span class="hljs-comment">// 3.0</span>
+    System.out.println(Math.ceil(<span class="hljs-number">3.0</span>));  <span class="hljs-comment">// 3.0</span>
 
-    &#x2F;&#x2F;向下取整，抹零
-    System.out.println(Math.floor(30.1)); &#x2F;&#x2F; 30.0
-    System.out.println(Math.floor(30.9)); &#x2F;&#x2F; 30.0
-    System.out.println(Math.floor(31.0)); &#x2F;&#x2F; 31.0
-    System.out.println(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);
-
-
-    &#x2F;&#x2F;四舍五入
-    System.out.println(Math.round(20.4));  &#x2F;&#x2F; 20
-    System.out.println(Math.round(10.5));  &#x2F;&#x2F; 11
+    <span class="hljs-comment">//向下取整，抹零</span>
+    System.out.println(Math.floor(<span class="hljs-number">30.1</span>)); <span class="hljs-comment">// 30.0</span>
+    System.out.println(Math.floor(<span class="hljs-number">30.9</span>)); <span class="hljs-comment">// 30.0</span>
+    System.out.println(Math.floor(<span class="hljs-number">31.0</span>)); <span class="hljs-comment">// 31.0</span>
+    System.out.println(<span class="hljs-string">&quot;================================&quot;</span>);
 
 
-    &#x2F;&#x2F;常量
-    System.out.println(Math.PI);            &#x2F;&#x2F; 3.1415....
+    <span class="hljs-comment">//四舍五入</span>
+    System.out.println(Math.round(<span class="hljs-number">20.4</span>));  <span class="hljs-comment">// 20</span>
+    System.out.println(Math.round(<span class="hljs-number">10.5</span>));  <span class="hljs-comment">// 11</span>
 
 
-    int[] ar &#x3D; &#123;2,9,5,4,21,6321,2,52,852&#125;;
-    int a &#x3D; 100;
-    int b &#x3D; 20;
-    &#x2F;&#x2F; max比较两个数大小
+    <span class="hljs-comment">//常量</span>
+    System.out.println(Math.PI);            <span class="hljs-comment">// 3.1415....</span>
+
+
+    <span class="hljs-keyword">int</span>[] ar = &#123;<span class="hljs-number">2</span>,<span class="hljs-number">9</span>,<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">21</span>,<span class="hljs-number">6321</span>,<span class="hljs-number">2</span>,<span class="hljs-number">52</span>,<span class="hljs-number">852</span>&#125;;
+    <span class="hljs-keyword">int</span> a = <span class="hljs-number">100</span>;
+    <span class="hljs-keyword">int</span> b = <span class="hljs-number">20</span>;
+    <span class="hljs-comment">// max比较两个数大小</span>
     System.out.println(Math.max(a,b));
-    System.out.println(Math.max(1,3));
+    System.out.println(Math.max(<span class="hljs-number">1</span>,<span class="hljs-number">3</span>));
 
 
 
